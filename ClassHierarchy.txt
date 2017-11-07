@@ -4,10 +4,11 @@ Overlap
   extra variable but it could be left blank.
   Monster and Character are also almost the same with each having a few things that the other does not. There could be a shared super
   class for these two.
+  There are potential structures for these two super classes at the end.
 
 Item
   name
-  descrption
+  description
   picture
   weight
   cost
@@ -89,6 +90,7 @@ Monster
   modifiers
   armorClass
   alignment
+  proficienceBonus
 
 Spell
   name
@@ -109,3 +111,20 @@ Map
   characters
   monsters
 
+
+RPGToolbox
+  name
+  description
+  picture
+
+Alive
+  items
+  armorClass
+  heath
+  modifiers
+  experiance
+  alignment
+  abilities
+  spells
+  proficiencyBonus
+  movement
