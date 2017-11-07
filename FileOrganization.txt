@@ -17,6 +17,7 @@
   >Documentation
     -ClassHierarchy.txt
     -SampleData.txt
+    -FileOrganization.txt
   >Database
     >Pitures
     -Items.json
