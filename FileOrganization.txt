@@ -3,6 +3,10 @@
   >Code
     >Classes
       -Item.java
+      -Armor.java
+      -Weapon.java
+      -Bag.java
+      -Acceory.java
       -Character.java
       -Map.java
       -Monster.java
