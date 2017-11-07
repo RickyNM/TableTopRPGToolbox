@@ -12,7 +12,7 @@
       -Monster.java
       -CharacterClass.java
       -Race.java
-      -Spells.java
+      -Spell.java
       -Background.java
     -NameGenerator.java
     -MapGenerator.java
