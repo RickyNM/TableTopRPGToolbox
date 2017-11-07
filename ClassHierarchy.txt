@@ -23,7 +23,7 @@ Armor extends Item
   armorClass
   stealth
 
-Acceory extends Item
+Accessory extends Item
   type
   effect
 
