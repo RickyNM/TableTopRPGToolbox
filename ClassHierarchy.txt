@@ -1,0 +1,94 @@
+Items
+  name
+  descrption
+  picture
+  weight
+  cost
+
+Weapon extends Item
+  damage
+  damageType
+  hands
+  range
+
+Armor extends Item
+  armorClass
+  stealth
+
+Acceory extends Item
+  type
+  effect
+
+Bag extends Item
+  contends
+  maxWeight
+
+Race
+  name
+  description
+  picture
+  abilities
+  movement
+  size
+  proficiencies
+
+Bckground
+  name
+  description
+  picture
+  items
+  ability
+  chacterTraites
+  proficiencies
+
+CharacterClass
+  name
+  description
+  picture
+  items
+  health
+  proficiencies
+  abilities
+
+Character
+  name
+  description
+  picture
+  items
+  health
+  armorClass
+  proficiencyBonus
+  proficiencies
+  chacterTraits
+  alignment
+  experiance
+  modifiers
+  abilities
+  spells
+  movement
+
+Monster
+  name
+  description
+  picture
+  items
+  health
+  spells
+  abilities
+  movement
+  experiance
+  difficulty
+  regions
+  modifiers
+  armorClass
+
+Spell
+  name
+  description
+  range
+  duration
+  effect
+  cost
+  level
+  concentration
+
