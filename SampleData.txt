@@ -1,0 +1,11 @@
+Item
+[
+  {
+    "subclass":"accessory"
+    "name":"ring of water walking"
+    "description":"A thin band that has a brown top and the depiction of waves below it."
+    "picture":"./Pictures/ringOfWaterWalking.jpg"
+    "type":"ring"
+    "effect":"movement:walking aplies to water"
+  }
+]
