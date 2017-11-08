@@ -7,124 +7,181 @@ Overlap
   There are potential structures for these two super classes at the end.
 
 Item
-  name
-  description
-  picture
-  weight
-  cost
+  Instance Veriables
+    name
+    description
+    picture
+    weight
+    cost
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Weapon extends Item
-  damage
-  damageType
-  hands
-  range
+  Instance Veriables
+    damage
+    damageType
+    hands
+    range
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Armor extends Item
-  armorClass
-  stealth
+  Instance Veriables
+    armorClass
+    stealth
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Accessory extends Item
-  type
-  effect
+  Instance Veriables
+    type
+    effect
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Bag extends Item
-  contends
-  maxWeight
+  Instance Veriables
+    contends
+    maxWeight
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Race
-  name
-  description
-  picture
-  abilities
-  movement
-  size
-  proficiencies
+  Instance Veriables
+    name
+    description
+    picture
+    abilities
+    movement
+    size
+    proficiencies
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Bckground
-  name
-  description
-  picture
-  items
-  ability
-  chacterTraites
-  proficiencies
+  Instance Veriables
+    name
+    description
+    picture
+    items
+    ability
+    chacterTraites
+    proficiencies
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 CharacterClass
-  name
-  description
-  picture
-  items
-  health
-  proficiencies
-  abilities
+  Instance Veriables
+    name
+    description
+    picture
+    items
+    health
+    proficiencies
+    abilities
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Character
-  name
-  description
-  picture
-  items
-  health
-  armorClass
-  proficiencyBonus
-  proficiencies
-  chacterTraits
-  alignment
-  experiance
-  modifiers
-  abilities
-  spells
-  movement
+  Instance Veriables
+    name
+    description
+    picture
+    items
+    health
+    armorClass
+    proficiencyBonus
+    proficiencies
+    chacterTraits
+    alignment
+    experiance
+    modifiers
+    abilities
+    spells
+    movement
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Monster
-  name
-  description
-  picture
-  items
-  health
-  spells
-  abilities
-  movement
-  experiance
-  difficulty
-  regions
-  modifiers
-  armorClass
-  alignment
-  proficienceBonus
+  Instance Veriables
+    name
+    description
+    picture
+    items
+    health
+    spells
+    abilities
+    movement
+    experiance
+    difficulty
+    regions
+    modifiers
+    armorClass
+    alignment
+    proficienceBonus
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Spell
-  name
-  description
-  range
-  duration
-  effect
-  cost
-  level
-  concentration
+  Instance Veriables
+    name
+    description
+    range
+    duration
+    effect
+    cost
+    level
+    concentration
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Map
-  name
-  description
-  picture
-  maps
-  items
-  characters
-  monsters
+  Instance Veriables
+    name
+    description
+    picture
+    maps
+    items
+    characters
+    monsters
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
+Posible Classes
 
 RPGToolbox
-  name
-  description
-  picture
+  Instance Veriables
+    name
+    description
+    picture
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
 
 Alive
-  items
-  armorClass
-  heath
-  modifiers
-  experiance
-  alignment
-  abilities
-  spells
-  proficiencyBonus
-  movement
+  Instance Veriables
+    items
+    armorClass
+    heath
+    modifiers
+    experiance
+    alignment
+    abilities
+    spells
+    proficiencyBonus
+    movement
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
