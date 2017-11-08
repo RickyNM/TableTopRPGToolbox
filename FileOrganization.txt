@@ -2,6 +2,8 @@
   -README
   >Code
     >Classes
+      -RPGToolbox.java
+      -Alive.java
       -Item.java
       -Armor.java
       -Weapon.java
