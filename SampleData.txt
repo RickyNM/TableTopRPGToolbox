@@ -8,6 +8,6 @@ Item
     "weight":".1lb"
     "cost":"2000GP"
     "type":"ring"
-    "effect":"movement:walking aplies to water"
+    "effect":"movement: + walking aplies to water"
   }
 ]
