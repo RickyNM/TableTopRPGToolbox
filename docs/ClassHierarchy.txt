@@ -6,11 +6,9 @@ Overlap
   class for these two.
   There are potential structures for these two super classes at the end.
 
-Item
+
+Item extendsRPGToolbox
   Instance Veriables
-    name
-    description
-    picture
     weight
     cost
   Functions
@@ -51,11 +49,8 @@ Bag extends Item
     get and set for all instance veriables
     writeTo - to save changes to the database
 
-Race
+Race extendsRPGToolbox
   Instance Veriables
-    name
-    description
-    picture
     abilities
     movement
     size
@@ -64,11 +59,8 @@ Race
     get and set for all instance veriables
     writeTo - to save changes to the database
 
-Bckground
+Bckground extendsRPGToolbox
   Instance Veriables
-    name
-    description
-    picture
     items
     ability
     chacterTraites
@@ -77,11 +69,8 @@ Bckground
     get and set for all instance veriables
     writeTo - to save changes to the database
 
-CharacterClass
+CharacterClass extendsRPGToolbox
   Instance Veriables
-    name
-    description
-    picture
     items
     health
     proficiencies
@@ -90,87 +79,7 @@ CharacterClass
     get and set for all instance veriables
     writeTo - to save changes to the database
 
-Character
-  Instance Veriables
-    name
-    description
-    picture
-    items
-    health
-    armorClass
-    proficiencyBonus
-    proficiencies
-    chacterTraits
-    alignment
-    experiance
-    modifiers
-    abilities
-    spells
-    movement
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Monster
-  Instance Veriables
-    name
-    description
-    picture
-    items
-    health
-    spells
-    abilities
-    movement
-    experiance
-    difficulty
-    regions
-    modifiers
-    armorClass
-    alignment
-    proficienceBonus
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Spell
-  Instance Veriables
-    name
-    description
-    range
-    duration
-    effect
-    cost
-    level
-    concentration
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Map
-  Instance Veriables
-    name
-    description
-    picture
-    maps
-    items
-    characters
-    monsters
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Posible Classes
-
-RPGToolbox
-  Instance Veriables
-    name
-    description
-    picture
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Alive
+Alive extends RPGToolbox
   Instance Veriables
     items
     armorClass
@@ -182,6 +91,53 @@ Alive
     spells
     proficiencyBonus
     movement
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
+
+Character extends Alive
+  Instance Veriables
+    proficiencies
+    chacterTraits
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
+
+Monster extends Alive
+  Instance Veriables
+    difficulty
+    regions
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
+
+Spell extends RPGToolbox
+  Instance Veriables
+    range
+    duration
+    effect
+    cost
+    level
+    concentration
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
+
+Map extends RPGToolbox
+  Instance Veriables
+    maps
+    items
+    characters
+    monsters
+  Functions
+    get and set for all instance veriables
+    writeTo - to save changes to the database
+
+RPGToolbox
+  Instance Veriables
+    name
+    description
+    picture
   Functions
     get and set for all instance veriables
     writeTo - to save changes to the database
