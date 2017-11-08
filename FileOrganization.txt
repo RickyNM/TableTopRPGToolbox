@@ -18,6 +18,7 @@
     -MapGenerator.java
     -UI.java
     -CharacterGenerator.java
+    -TTRPGToolbox.java (handles connecting all the elements)
   >Documentation
     -ClassHierarchy.txt
     -SampleData.txt
