@@ -1,0 +1,35 @@
+>TableTopRPGToolbox
+  -README
+  >Code
+    >Classes
+      -Item.java
+      -Armor.java
+      -Weapon.java
+      -Bag.java
+      -Acceory.java
+      -Character.java
+      -Map.java
+      -Monster.java
+      -CharacterClass.java
+      -Race.java
+      -Spell.java
+      -Background.java
+    -NameGenerator.java
+    -MapGenerator.java
+    -UI.java
+    -CharacterGenerator.java
+    -TTRPGToolbox.java (handles connecting all the elements)
+  >Documentation
+    -ClassHierarchy.txt
+    -SampleData.txt
+    -FileOrganization.txt
+  >Database
+    >Pitures
+    -Items.json
+    -Characters.json
+    -Maps.json
+    -Monsters.json
+    -CharacterClasses.json
+    -Races.json
+    -Spells.json
+    -Backgrounds.json
