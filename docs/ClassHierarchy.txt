@@ -6,6 +6,7 @@ Overlap
   class for these two.
   There are potential structures for these two super classes at the end.
 
+
 Item extendsRPGToolbox
   Instance Veriables
     weight
