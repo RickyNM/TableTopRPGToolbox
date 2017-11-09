@@ -7,51 +7,32 @@ public class ToolboxUI extends JFrame{
   private JLabel title;
   private JButton playerButton;
   private JButton dmButton;
-  private JButton goBack;
   private JPanel panelMain;
-  private JPanel card1;
-  private JPanel card2;
-  private CardLayout cards;
+  private JPanel mainPage;
 
   public ToolboxUI(){
-    super("ToolboxUI");
+    super("Tabletop RPG Toolbox");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    title = new JLabel("<html> Welcome to The D&D Toolbox <br> Please Choose Your Role Below <br></html>", SwingConstants.CENTER);
+    title = new JLabel("<html> Welcome to The Tabletop RPG Toolbox <br> Please Choose Your Role Below <br></html>", SwingConstants.CENTER);
+    title.setFont(new Font("Serif", Font.BOLD, 28));
 
     dmButton = new JButton("Dungeon Master");
-    dmButton.setActionCommand("Dungeon Master");
-    dmButton.addActionListener(new ActionListener()
-    {
-      @Override
-      public void actionPerformed(ActionEvent event)
-      {
-        cards.next(panelMain);
-      }
-    });
+    dmButton.addActionListener(new ButtonListener());
+    dmButton.setFont(new Font("Serif", Font.BOLD, 20));
 
     playerButton = new JButton("Player");
     playerButton.addActionListener(new ButtonListener2());
+    playerButton.setFont(new Font("Serif", Font.BOLD, 20));
 
-    goBack = new JButton("Go Back");
-    goBack.addActionListener(new ButtonListener3());
+    JPanel panelMain = new JPanel(new BorderLayout());
 
-    cards = new CardLayout();
-    JPanel panelMain = new JPanel();
-    panelMain.setLayout(cards);
-    cards.show(panelMain, "Main Page");
+    JPanel mainPage = new JPanel(new GridLayout(3,1,1,1));
+    mainPage.add(title, BorderLayout.CENTER);
+    mainPage.add(dmButton, BorderLayout.CENTER);
+    mainPage.add(playerButton, BorderLayout.CENTER);
 
-
-    JPanel card1 = new JPanel();
-    card1.add(title);
-    card1.add(dmButton);
-    card1.add(playerButton);
-
-    JPanel card2 = new JPanel();
-    card2.add(goBack);
-
-    panelMain.add(card1, "Main Page");
-    panelMain.add(card2, "DM Page");
+    panelMain.add(mainPage, BorderLayout.CENTER);
 
     this.setLayout(new BorderLayout());
     this.add(panelMain, BorderLayout.CENTER);
@@ -60,19 +41,13 @@ public class ToolboxUI extends JFrame{
     this.setVisible(true);
   }
 
-  //public class ButtonListener implements ActionListener{
-    //public void actionPerformed(ActionEvent event){
-      //  cards.next(panelMain);
-    //  }
-//  }
-
-  public class ButtonListener2 implements ActionListener{
-    public void actionPerformed(ActionEvent e2){
+  public class ButtonListener implements ActionListener{
+    public void actionPerformed(ActionEvent e){
     }
   }
 
-  public class ButtonListener3 implements ActionListener{
-    public void actionPerformed(ActionEvent e3){
+  public class ButtonListener2 implements ActionListener{
+    public void actionPerformed(ActionEvent e2){
     }
   }
 
