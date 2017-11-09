@@ -4,14 +4,14 @@ public class RPGToolbox
   private String description;
   private String picture;
 
-  public TTRPGToolbox()
+  public RPGToolbox()
   {
     name = "";
     description = "";
     picture = "";
   }
 
-  public TTRPGToolbox(String newName, String newDescription, String newPicture)
+  public RPGToolbox(String newName, String newDescription, String newPicture)
   {
     name = newName;
     description = newDescription;
