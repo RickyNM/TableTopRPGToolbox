@@ -111,7 +111,7 @@ Monster extends Alive
     get and set for all instance veriables
     writeTo - to save changes to the database
 
-Spell extends RPGToolbox
+SpellAbility extends RPGToolbox
   Instance Veriables
     range
     duration
@@ -141,3 +141,18 @@ RPGToolbox
   Functions
     get and set for all instance veriables
     writeTo - to save changes to the database
+    
+Camaign
+  Instance Veriables
+    items
+    maps
+    characterClasses
+    monsters
+    characters
+    spellAbilities
+    backgrounds
+    races
+  Functions
+    add and remove for all instance veriables
+    construct - builds databases from files
+    writeTo - saves all changes to the databases
