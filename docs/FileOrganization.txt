@@ -14,8 +14,9 @@
       -Monster.java
       -CharacterClass.java
       -Race.java
-      -Spell.java
+      -SpellAbility.java
       -Background.java
+      -Campaign.java
     -NameGenerator.java
     -MapGenerator.java
     -UI.java
