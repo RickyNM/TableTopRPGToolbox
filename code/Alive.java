@@ -1,5 +1,5 @@
 /*
- *  Aliva.java
+ *  Alive.java
  *
  *  Author: Strider Jonak
  *  Version: 11.18.2017
