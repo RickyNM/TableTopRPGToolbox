@@ -23,6 +23,8 @@
     -CharacterGenerator.java
     -TTRPGToolbox.java (handles connecting all the elements)
   >Documentation
+    -Roadmap.txt
+    -PaperPrototypeRespons.txt
     -ClassHierarchy.txt
     -SampleData.txt
     -FileOrganization.txt
