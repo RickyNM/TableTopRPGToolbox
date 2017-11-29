@@ -1,158 +1,162 @@
 Overlap
-  All but Spell have name, description, and picture. Spell does not have the picture. A posible idea would be to have a super class 
-  called something like RPGToolbox.java which they all extend that has a name, description, and picture. The spells would have the 
-  extra variable but it could be left blank.
-  Monster and Character are also almost the same with each having a few things that the other does not. There could be a shared super
-  class for these two.
-  There are potential structures for these two super classes at the end.
+All but Spell have name, description, and picture. Spell does not have the picture. A posible idea would be to have a super class called something like RPGToolbox.java which they all extend that has a name, description, and picture.
+The spells would have the extra variable but it could be left blank. Monster and Character are also almost the same with each having a few things that the other does not.
+There could be a shared super class for these two. There are potential structures for these two super classes at the end.
 
+--------------------------------------------------
 
-Item extendsRPGToolbox
-  Instance Veriables
-    weight
-    cost
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
++ Campaign
+  + Instance Variables
+    + items
+    + maps
+    + characterClasses
+    + monsters
+    + characters
+    + spellAbilities
+    + backgrounds
+    + races
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+    + construct - builds databases from files
 
-Weapon extends Item
-  Instance Veriables
-    damage
-    damageType
-    hands
-    range
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Armor extends Item
-  Instance Veriables
-    armorClass
-    stealth
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Accessory extends Item
-  Instance Veriables
-    type
-    effect
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Bag extends Item
-  Instance Veriables
-    contends
-    maxWeight
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Race extendsRPGToolbox
-  Instance Veriables
-    abilities
-    movement
-    size
-    proficiencies
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Bckground extendsRPGToolbox
-  Instance Veriables
-    items
-    ability
-    chacterTraites
-    proficiencies
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-CharacterClass extendsRPGToolbox
-  Instance Veriables
-    items
-    health
-    proficiencies
-    abilities
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Alive extends RPGToolbox
-  Instance Veriables
-    items
-    armorClass
-    heath
-    modifiers
-    experiance
-    alignment
-    abilities
-    spells
-    proficiencyBonus
-    movement
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Character extends Alive
-  Instance Veriables
-    proficiencies
-    chacterTraits
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Monster extends Alive
-  Instance Veriables
-    difficulty
-    regions
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-SpellAbility extends RPGToolbox
-  Instance Veriables
-    range
-    duration
-    effect
-    cost
-    level
-    concentration
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-Map extends RPGToolbox
-  Instance Veriables
-    maps
-    items
-    characters
-    monsters
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
-
-RPGToolbox
-  Instance Veriables
-    name
-    description
-    picture
-  Functions
-    get and set for all instance veriables
-    writeTo - to save changes to the database
++ RPGToolbox
+  + Instance Variables
+    + name
+    + description
+    + picture
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
     
-Camaign
-  Instance Veriables
-    items
-    maps
-    characterClasses
-    monsters
-    characters
-    spellAbilities
-    backgrounds
-    races
-  Functions
-    add and remove for all instance veriables
-    construct - builds databases from files
-    writeTo - saves all changes to the databases
+--------------------------------------------------
+
++ Alive (extends RPGToolbox)
+  + Instance Variables
+    + items
+    + armorClass
+    + heath
+    + modifiers
+    + experiance
+    + alignment
+    + abilities
+    + spells
+    + proficiencyBonus
+    + movement
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Item (extends RPGToolbox)
+  + Instance Variables
+    + weight
+    + cost
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+    
++ Race (extends RPGToolbox)
+  + Instance Variables
+    + abilities
+    + movement
+    + size
+    + proficiencies
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Background (extends RPGToolbox)
+  + Instance Variables
+    + items
+    + ability
+    + characterTraits
+    + proficiencies
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ CharacterClass (extends RPGToolbox)
+  + Instance Variables
+    + items
+    + health
+    + proficiencies
+    + abilities
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ SpellAbility (extends RPGToolbox)
+  + Instance Variables
+    + range
+    + duration
+    + effect
+    + cost
+    + level
+    + concentration
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Map (extends RPGToolbox)
+  + Instance Variables
+    + maps
+    + items
+    + characters
+    + monsters
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
+--------------------------------------------------
+    
++ Character (extends Alive)
+  + Instance Variables
+    + proficiencies
+    + chacterTraits
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Monster (extends Alive)
+  + Instance Variables
+    + difficulty
+    + regions
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+    
+--------------------------------------------------
+
++ Weapon (extends Item)
+  + Instance Variables
+    + damage
+    + damageType
+    + hands
+    + range
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Armor (extends Item)
+  + Instance Variables
+    + armorClass
+    + stealth
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Accessory (extends Item)
+  + Instance Variables
+    + type
+    + effect
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Bag (extends Item)
+  + Instance Variables
+    + contents
+    + maxWeight
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
