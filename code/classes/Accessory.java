@@ -27,6 +27,7 @@ public class Accessory extends Item
   public void setType(String newType)
   {
     if (newType != null && !newType.trim().equals(""))
+
     {
       type = newType;
     }
@@ -43,6 +44,7 @@ public class Accessory extends Item
 
   public void setEffect(SpellAbility newEffect)
   {
+
       if (newEffect != null) {
         effect = newEffect;
       }
@@ -50,6 +52,7 @@ public class Accessory extends Item
       {
         System.out.println("There is no effect.");
       }
+
   }
 
   public void writeTo(String fileabilities)
