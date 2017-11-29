@@ -85,7 +85,7 @@ there are potential structures for these two super classes at the end.
 + CharacterClass (extends RPGToolbox)
   + Instance Variables
     + items
-    + health
+    + hitdie
     + proficiencies
     + abilities
   + Functions
