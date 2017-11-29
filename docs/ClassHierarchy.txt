@@ -1,0 +1,169 @@
+Overlap
+
+All but Spell have name, description, and picture. Spell does not have the picture.
+A posible idea would be to have a super class called something like RPGToolbox.java which,
+all extend that has a name, description, and picture.
+
+The spells would have the extra variable but it could be left blank.
+Monster and Character are also almost the same with each having a few things that the other does not.
+
+There could be a shared super class for these two,
+there are potential structures for these two super classes at the end.
+
+--------------------------------------------------
+
++ Campaign
+  + Instance Variables
+    + items
+    + maps
+    + characterClasses
+    + monsters
+    + characters
+    + spellAbilities
+    + backgrounds
+    + races
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+    + construct - builds databases from files
+
++ RPGToolbox
+  + Instance Variables
+    + name
+    + description
+    + picture
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+    
+--------------------------------------------------
+
++ Alive (extends RPGToolbox)
+  + Instance Variables
+    + items
+    + armorClass
+    + heath
+    + modifiers
+    + experiance
+    + alignment
+    + abilities
+    + spells
+    + proficiencyBonus
+    + movement
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Item (extends RPGToolbox)
+  + Instance Variables
+    + weight
+    + cost
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+    
++ Race (extends RPGToolbox)
+  + Instance Variables
+    + abilities
+    + movement
+    + size
+    + proficiencies
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Background (extends RPGToolbox)
+  + Instance Variables
+    + items
+    + ability
+    + characterTraits
+    + proficiencies
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ CharacterClass (extends RPGToolbox)
+  + Instance Variables
+    + items
+    + hitdie
+    + proficiencies
+    + abilities
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ SpellAbility (extends RPGToolbox)
+  + Instance Variables
+    + range
+    + duration
+    + effect
+    + cost
+    + level
+    + concentration
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Map (extends RPGToolbox)
+  + Instance Variables
+    + maps
+    + items
+    + characters
+    + monsters
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
+--------------------------------------------------
+    
++ Character (extends Alive)
+  + Instance Variables
+    + proficiencies
+    + chacterTraits
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Monster (extends Alive)
+  + Instance Variables
+    + difficulty
+    + regions
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+    
+--------------------------------------------------
+
++ Weapon (extends Item)
+  + Instance Variables
+    + damage
+    + damageType
+    + hands
+    + range
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Armor (extends Item)
+  + Instance Variables
+    + armorClass
+    + stealth
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Accessory (extends Item)
+  + Instance Variables
+    + type
+    + effect
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
+
++ Bag (extends Item)
+  + Instance Variables
+    + contents
+    + maxWeight
+  + Functions
+    + get/set - change instance variables
+    + writeTo - to save changes to the database
