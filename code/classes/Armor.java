@@ -25,9 +25,17 @@ public class Armor extends Item
 
   public void setArmorClass(String newArmorClass)
   {
-    if (newArmorClass != null)
+    if (newArmorClass != null && !newArmorClass.trim().equals(""))
     {
-      armorClass = newArmorClass;
+      newArmorClass = newArmorClass.trim();
+      String[] words = newArmorClass.split(" ");
+      if (words.length == 1 || words.length == 3) {
+        armorClass = newArmorClass;
+      }
+      else
+      {
+        System.out.println("The corect format is '# + Dex' or '#'.");
+      }
     }
     else
     {
