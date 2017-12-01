@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.io.*;
 
 public class Campaign
 {
-  private ArrayList<Background> backgronds;
+  private ArrayList<Background> backgrounds;
   private ArrayList<Character> characters;
   private ArrayList<CharacterClass> characterClasses;
   private ArrayList<Item> items;
@@ -11,9 +12,18 @@ public class Campaign
   private ArrayList<Race> races;
   private ArrayList<SpellAbility> spellaAbilities;
 
-  public Campaign()
+  private static String BACKGROUNDS      = "..\\Files\\Backgronds.txt";
+  private static String CHARACTERS       = "..\\Files\\Characters.txt";
+  private static String CHARACTERCLASSES = "..\\Files\\CharacterClasses.txt";
+  private static String ITEMS            = "..\\Files\\Items.txt";
+  private static String MAPS             = "..\\Files\\Maps.txt";
+  private static String MONSTERS         = "..\\Files\\Monsters.txt";
+  private static String RACES            = "..\\Files\\Races.txt";
+  private static String SPELLABILITIES   = "..\\Files\\SpellAbilities.txt";
+
+  public Campain()
   {
-    backgronds = new ArrayList<Background>();
+    backgrounds = new ArrayList<Background>();
     characters = new ArrayList<Characcter>();
     characterClasses = new ArrayList<CharacterClass>();
     items = new ArrayList<Item>();
@@ -458,12 +468,185 @@ public class Campaign
 
   public void construct()
   {
-    //stuff
+    readBackgrounds();
+    readCharacters();
+    readCharacterClasses();
+    readItems();
+    readMaps();
+    readMonsters();
+    readRaces();
+    readSpellAbilities();
   }
 
   public void writeTo()
   {
-    //stuff
+    writeBackgrounds();
+    writeCharacters();
+    writeCharacterClasses();
+    writeItems();
+    writeMaps();
+    writeMonsters();
+    writeRaces();
+    writeSpellAbilities();
+  }
+
+  private void writeBackgrounds();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(BACKGROUNDS);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < backgrounds.size(); i++)
+      {
+        bufferedWriter.write(backgrounds.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
+  }
+
+  private void writeCharacters();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(CHARACTERS);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < characters.size(); i++)
+      {
+        bufferedWriter.write(characters.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
+  }
+
+  private void writeCharacterClasses();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(CHARACTERCLASSES);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < characterclasses.size(); i++)
+      {
+        bufferedWriter.write(characterclasses.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
+  }
+
+  private void writeItems();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(ITEMS);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < items.size(); i++)
+      {
+        bufferedWriter.write(items.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
+  }
+
+  private void writeMaps();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(MAPS);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < maps.size(); i++)
+      {
+        bufferedWriter.write(maps.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
+  }
+
+  private void writeMonsters();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(MONSTERS);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < monsters.size(); i++)
+      {
+        bufferedWriter.write(monsters.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
+  }
+
+  private void writeRaces();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(RACES);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < races.size(); i++)
+      {
+        bufferedWriter.write(races.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
+  }
+
+  private void writeSpellAbilities();
+  {
+    try {
+      FileWriter fileWriter = new FileWriter(SPELLABILITIES);
+
+      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+      for (int i = 0; i < spellAbilities.size(); i++)
+      {
+        bufferedWriter.write(spellAbilities.get(i).toString());
+        bufferedWriter.newLine();
+      }
+
+      bufferedWriter.close();
+    }
+    catch(IOException ex) {
+      System.out.println("Error writing to file '"+ fileName + "'");
+    }
   }
 }
-
