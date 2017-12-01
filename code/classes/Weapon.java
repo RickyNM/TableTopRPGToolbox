@@ -1,5 +1,4 @@
 
-
 public class Weapon extends Item
 {
   private String damage;
@@ -32,8 +31,9 @@ public class Weapon extends Item
 
   public void setHands(String newHands)
   {
-    if (newHands != null)
+    if (newHands != null && !newHands.trim().equals(""))
     {
+      newHands = newHands.trim();
       hands = newHands;
     }
     else
@@ -44,8 +44,9 @@ public class Weapon extends Item
 
   public void setDamage(String newDamage)
   {
-    if (newDamage != null)
+    if (newDamage != null && !newDamage.trim().equals(""))
     {
+      newDamage = newDamage.trim();
       damage = newDamage;
     }
     else
@@ -61,13 +62,14 @@ public class Weapon extends Item
 
   public void setDamageType(String newDamageType)
   {
-    if (newDamageType != null)
+    if (newDamageType != null && !newDamageType.trim().equals(""))
     {
+      newDamageType = newDamageType.trim();
       damageType = newDamageType;
     }
     else
     {
-      System.out.println("Cannot have a negative damageType.");
+      System.out.println("No damageType given.");
     }
   }
 
@@ -83,13 +85,14 @@ public class Weapon extends Item
 
   public void setRange(String newRange)
   {
-    if (newRange != null)
+    if (newRange != null && !newRange.trim().equals(""))
     {
+      newRange = newRange.trim();
       range = newRange;
     }
     else
     {
-      System.out.println("Cannot have a negative damageType.");
+      System.out.println("No range given.");
     }
   }
 

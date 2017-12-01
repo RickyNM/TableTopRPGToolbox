@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 public class Bag extends Item
@@ -40,6 +39,60 @@ public class Bag extends Item
     return contained;
   }
 
+  public void addItem(Item newItem)
+  {
+    if (newItem != null)
+    {
+      contained.add(newItem);
+    }
+  }
+
+  public void setItem(Item newItem, int i)
+  {
+    if (i < 0 || i > contained.size() || newItem == null)
+    {
+      System.out.println("Invalid set conditions");
+    }
+    else
+    {
+      contained.set(i, newItem);
+    }
+  }
+
+  public Item getItem(int i)
+  {
+    if (i < 0 || i > contained.size())
+    {
+      System.out.println("That is outside the list");
+      return null;
+    }
+    return contained.get(i);
+  }
+
+  public Item removeItem(Item oldItem)
+  {
+    if (oldItem != null)
+    {
+      for (int i = 0; i < contained.size(); i++)
+      {
+        if (oldItem.getName().equals(contained.get(i).getName()))
+        {
+          return contained.remove(i);
+        }
+      }
+    }
+    return null;
+  }
+
+  public Item removeItem(int i)
+  {
+    if (i >= 0 && i < contained.size())
+    {
+      return contained.remove(i);
+    }
+    return null;
+  }
+
   public int getMaxWeight()
   {
     return maxWeight;
@@ -79,6 +132,3 @@ public class Bag extends Item
     //stuff
   }
 }
-/*
-    maxWeight
-*/

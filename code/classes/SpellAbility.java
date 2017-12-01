@@ -1,5 +1,4 @@
 
-
 public class SpellAbility extends RPGToolbox
 {
   private String range;
@@ -33,13 +32,14 @@ public class SpellAbility extends RPGToolbox
 
   public void setRange(String newRange)
   {
-    if (newRange != null)
+    if (newRange != null && !newRange.trim().equals(""))
     {
+      newRange = newRange.trim();
       range = newRange;
     }
     else
     {
-      System.out.println("There are no range.");
+      System.out.println("There is no range.");
     }
   }
 
@@ -84,7 +84,14 @@ public class SpellAbility extends RPGToolbox
 
   public void setDuration(int newDuration)
   {
+    if (newDuration >= 0)
+    {
       duration = newDuration;
+    }
+    else
+    {
+      System.out.println("You cannot have a negative duration");
+    }
   }
 
   public int getDuration()
@@ -94,7 +101,14 @@ public class SpellAbility extends RPGToolbox
 
   public void setLevel(int newLevel)
   {
+    if (newLevel >= 0)
+    {
       level = newLevel;
+    }
+    else
+    {
+      System.out.println("There are no negative spell levels");
+    }
   }
 
   public int getlevel()

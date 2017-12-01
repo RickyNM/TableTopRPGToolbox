@@ -40,18 +40,22 @@ there are potential structures for these two super classes at the end.
 
 + Alive (extends RPGToolbox)
   + Instance Variables
-    + items
-    + armorClass
-    + heath
-    + modifiers
-    + experiance
-    + alignment
-    + abilities
-    + spells
-    + proficiencyBonus
-    + movement
+    + String NAME
+    + String ALIGNMENT
+    + int HEALTHNOW
+    + int HEALTHMAX
+    + int HEALTHTEMP
+    + int ARMORCLASS
+    + int MOVESPEED
+    + int EXPERIENCE
+    + List<Integer> StatLIST
+    + List<Integer> ModiLIST
+    + List<Item> ItemLIST
+    + List<SpellAbility> SpellLIST
+    + List<Boolean> ProfLIST
   + Functions
     + get/set - change instance variables
+    + add/sub - modify instance variables
     + writeTo - to save changes to the database
 
 + Item (extends RPGToolbox)

@@ -1,4 +1,3 @@
-
 public class Item extends RPGToolbox
 {
   private String cost;
@@ -42,7 +41,7 @@ public class Item extends RPGToolbox
 
   public void setWeight(int newWeight)
   {
-    if (newWeight > 0)
+    if (newWeight >= 0)
     {
       weight = newWeight;
     }
