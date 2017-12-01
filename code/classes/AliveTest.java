@@ -6,8 +6,8 @@ public class AliveTest {
 	public static void main(String[] args) {
 
 		List<Integer> stats1	= new ArrayList<>();
-		List<Integer> mods1		= new ArrayList<>();
-		List<Boolean> pros1		= new ArrayList<>();
+		List<Integer> mods1	= new ArrayList<>();
+		List<Boolean> pros1	= new ArrayList<>();
 
 		stats1.add(9);
 		stats1.add(18);
@@ -30,13 +30,13 @@ public class AliveTest {
 		Alive player1 = new Alive(
 			"Gandalf the Gray",	// NAME
 			"Neutral Good",		// ALIGNMENT
-			10,					// HEALTH
-			8,					// ARMORCLASS
-			30,					// MOVESPEED
-			500,				// EXPERIENCE
-			stats1,				// StatLIST
-			mods1,				// ModiLIST
-			pros1				// ProfLIST
+			10,			// HEALTH
+			8,			// ARMORCLASS
+			30,			// MOVESPEED
+			500,			// EXPERIENCE
+			stats1,			// StatLIST
+			mods1,			// ModiLIST
+			pros1			// ProfLIST
 		);
 		System.out.println(player1.toString());
 		System.out.println("<------LEVELUP----->");
