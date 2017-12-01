@@ -54,7 +54,6 @@ public class DnDToolbox extends javax.swing.JFrame {
         characterFrame.setAutoRequestFocus(false);
 
         searchCharacter.setText("Search...");
-        searchCharacter.setRequestFocusEnabled(false);
         searchCharacter.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 searchCharacterFocusGained(evt);
@@ -70,7 +69,6 @@ public class DnDToolbox extends javax.swing.JFrame {
         });
 
         newCharacter.setText("New Character");
-        newCharacter.setRequestFocusEnabled(false);
         newCharacter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newCharacterActionPerformed(evt);
@@ -114,7 +112,6 @@ public class DnDToolbox extends javax.swing.JFrame {
         itemFrame.setAutoRequestFocus(false);
 
         searchItem.setText("Search...");
-        searchItem.setRequestFocusEnabled(false);
         searchItem.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 searchItemFocusGained(evt);
@@ -130,7 +127,6 @@ public class DnDToolbox extends javax.swing.JFrame {
         });
 
         newItem.setText("New Item");
-        newItem.setRequestFocusEnabled(false);
 
         itemBoxPlaceHolder.setColumns(20);
         itemBoxPlaceHolder.setRows(5);
@@ -476,11 +472,12 @@ public class DnDToolbox extends javax.swing.JFrame {
     }//GEN-LAST:event_searchCharacterFocusLost
 
     private void searchItemFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchItemFocusGained
-        // TODO add your handling code here:
+        searchItem.setText("");
     }//GEN-LAST:event_searchItemFocusGained
 
     private void searchItemFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchItemFocusLost
-        // TODO add your handling code here:
+        searchItem.setEditable(true);
+        searchItem.setText("Search...");
     }//GEN-LAST:event_searchItemFocusLost
 
     private void searchItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchItemActionPerformed
