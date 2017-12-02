@@ -255,8 +255,16 @@ public class Background extends RPGToolbox
     return null;
   }
 
-  public void writeTo(String fileName)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Type: Background\n" + outPut;
+    outPut += "Ability: " + ability.toString() + "\n";
+    outPut += "CharacterTraits: " + characterTraits.toString() + "\n";
+    outPut += "Suggestions: " + suggestions.toString() + "\n";
+    outPut += "Items" + items.toString() + "\n";
+    outPut += "Proficiencies: " + proficiencies.toString() + "\n";
+    return outPut;
   }
 }
+
