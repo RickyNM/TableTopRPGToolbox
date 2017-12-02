@@ -96,8 +96,15 @@ public class Weapon extends Item
     }
   }
 
-  public void writeTo(String fileabilities)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Subtype: Weapon\n" + outPut;
+    outPut += "Damage: " + damage + "\n";
+    outPut += "DamageType: " + damageType + "\n";
+    outPut += "Range: " + range + "\n";
+    outPut += "Hands: " + hands + "\n";
+    return outPut;
   }
 }
+

@@ -234,9 +234,15 @@ public class Race extends RPGToolbox
     return null;
   }
 
-  public void writeTo(String fileabilities)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Type: Race\n" + outPut;
+    outPut += "Abilities: " + abilities.toString() + "\n";
+    outPut += "Movement: " + movement.toString() + "\n";
+    outPut += "Speed: " + speed.toString() + "\n";
+    outPut += "Size" + size + "\n";
+    outPut += "Proficiencies: " + proficiencies.toString() + "\n";
+    return outPut;
   }
 }
-

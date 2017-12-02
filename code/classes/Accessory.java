@@ -1,35 +1,33 @@
 
-
 public class Accessory extends Item
 {
-  private String type;
+  private String typeOf;
   private SpellAbility effect;
 
   public Accessory()
   {
     super();
-    type = "";
+    typeOf = "";
     effect = new SpellAbility();
   }
 
-  public Accessory(String newName, String newDescription, String newPicture,  String newCost, int newWeight, String newType, SpellAbility newEffect)
+  public Accessory(String newName, String newDescription, String newPicture,  String newCost, int newWeight, String newTypeOf, SpellAbility newEffect)
   {
     super(newName, newDescription, newPicture, newCost, newWeight);
-    type = newType;
+    typeOf = newTypeOf;
     effect = newEffect;
   }
 
-  public String getType()
+  public String getTypeOf()
   {
-    return type;
+    return typeOf;
   }
 
-  public void setType(String newType)
+  public void setTypeOf(String newTypeOf)
   {
-    if (newType != null && !newType.trim().equals(""))
-
+    if (newTypeOf != null && !newTypeOf.trim().equals(""))
     {
-      type = newType;
+      typeOf = newTypeOf;
     }
     else
     {
@@ -44,7 +42,6 @@ public class Accessory extends Item
 
   public void setEffect(SpellAbility newEffect)
   {
-
       if (newEffect != null) {
         effect = newEffect;
       }
@@ -52,11 +49,14 @@ public class Accessory extends Item
       {
         System.out.println("There is no effect.");
       }
-
   }
 
-  public void writeTo(String fileabilities)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Subtype: Accessory\n" + outPut;
+    outPut += "TypeOf: " + typeOf + "\n";
+    outPut += effect.toString();
+    return outPut;
   }
 }

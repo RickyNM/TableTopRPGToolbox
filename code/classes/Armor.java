@@ -53,8 +53,13 @@ public class Armor extends Item
       stealth = newStealth;
   }
 
-  public void writeTo(String fileabilities)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Subtype: Armor\n" + outPut;
+    outPut += "ArmorClass: " + armorClass + "\n";
+    outPut += "Stealth: " + stealth + "\n";
+    return outPut;
   }
 }
+

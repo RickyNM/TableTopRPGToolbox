@@ -69,8 +69,13 @@ public class RPGToolbox
     return picture;
   }
 
-  public void writeTo(String fileName)
+  public String toString()
   {
-    //stuff
+    String outPut = "";
+    outPut += "name: " + name + "\n";
+    outPut += "description: " + description + "\n";
+    outPut += "picture: " + picture + "\n";
+    return outPut;
   }
 }
+
