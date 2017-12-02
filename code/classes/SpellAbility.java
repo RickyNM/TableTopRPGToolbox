@@ -126,8 +126,17 @@ public class SpellAbility extends RPGToolbox
       concentration = newConcentration;
   }
 
-  public void writeTo(String filerange)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Type: Background\n" + outPut;
+    outPut += "Range: " + range + "\n";
+    outPut += "Cost: " + cost + "\n";
+    outPut += "Effect: " + effect + "\n";
+    outPut += "Duration" + String.valueOf(duration) + "\n";
+    outPut += "Level: " + String.valueOf(level) + "\n";
+    outPut += "Concentration: " + String.valueOf(concentration) + "\n";
+    return outPut;
   }
 }
+
