@@ -51,8 +51,13 @@ public class Item extends RPGToolbox
     }
   }
 
-  public void writeTo(String fileabilities)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Type: Item\n" + outPut;
+    outPut += "Cost: " + cost + "\n";
+    outPut += "Weight: " + String.valueOf(weight) + "\n";
+    return outPut;
   }
 }
+
