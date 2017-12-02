@@ -127,8 +127,13 @@ public class Bag extends Item
     }
   }
 
-  public void writeTo(String fileabilities)
+  public String toString()
   {
-    //stuff
+    String outPut = super.toString();
+    outPut = "Subtype: Bag\n" + outPut;
+    outPut += "Contained: " + contained.toString() + "\n";
+    outPut += "MaxWeight: " + String.valueOf(maxWeight) + "\n";
+    outPut += "CurentWeight: " + String.valueOf(curentWeight) + "\n";
+    return outPut;
   }
 }
