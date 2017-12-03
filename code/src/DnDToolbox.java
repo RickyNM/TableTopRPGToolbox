@@ -26,36 +26,206 @@ public class DnDToolbox extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFrame1 = new javax.swing.JFrame();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        characterFrame = new javax.swing.JFrame();
+        searchCharacter = new javax.swing.JTextField();
+        newCharacter = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        previousCharacters = new javax.swing.JTextArea();
+        itemFrame = new javax.swing.JFrame();
+        searchItem = new javax.swing.JTextField();
+        newItem = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        itemBoxPlaceHolder = new javax.swing.JTextArea();
+        spellFrame = new javax.swing.JFrame();
+        monsterFrame = new javax.swing.JFrame();
+        mapFrame = new javax.swing.JFrame();
+        lootFrame = new javax.swing.JFrame();
+        encounterFrame = new javax.swing.JFrame();
+        jDialog1 = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        characterButton = new javax.swing.JButton();
+        itemsButton = new javax.swing.JButton();
+        spellsButton = new javax.swing.JButton();
+        monstersButton = new javax.swing.JButton();
+        mapsButton = new javax.swing.JButton();
+        lootButton = new javax.swing.JButton();
+        encounterButton = new javax.swing.JButton();
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        characterFrame.setAutoRequestFocus(false);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        searchCharacter.setText("Search...");
+        searchCharacter.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                searchCharacterFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                searchCharacterFocusLost(evt);
+            }
+        });
+        searchCharacter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchCharacterActionPerformed(evt);
+            }
+        });
 
-        jFrame1.setJMenuBar(jMenuBar1);
+        newCharacter.setText("New Character");
+        newCharacter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newCharacterActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 878, Short.MAX_VALUE)
+        previousCharacters.setColumns(20);
+        previousCharacters.setRows(5);
+        previousCharacters.setText("Previous Characters go here.");
+        jScrollPane1.setViewportView(previousCharacters);
+
+        javax.swing.GroupLayout characterFrameLayout = new javax.swing.GroupLayout(characterFrame.getContentPane());
+        characterFrame.getContentPane().setLayout(characterFrameLayout);
+        characterFrameLayout.setHorizontalGroup(
+            characterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, characterFrameLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
+            .addGroup(characterFrameLayout.createSequentialGroup()
+                .addGroup(characterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(characterFrameLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(searchCharacter, javax.swing.GroupLayout.PREFERRED_SIZE, 803, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(characterFrameLayout.createSequentialGroup()
+                        .addGap(309, 309, 309)
+                        .addComponent(newCharacter, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 675, Short.MAX_VALUE)
+        characterFrameLayout.setVerticalGroup(
+            characterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(characterFrameLayout.createSequentialGroup()
+                .addComponent(searchCharacter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addComponent(newCharacter)
+                .addContainerGap())
+        );
+
+        itemFrame.setAutoRequestFocus(false);
+
+        searchItem.setText("Search...");
+        searchItem.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                searchItemFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                searchItemFocusLost(evt);
+            }
+        });
+        searchItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchItemActionPerformed(evt);
+            }
+        });
+
+        newItem.setText("New Item");
+
+        itemBoxPlaceHolder.setColumns(20);
+        itemBoxPlaceHolder.setRows(5);
+        itemBoxPlaceHolder.setText("Searched Items come up here.");
+        jScrollPane2.setViewportView(itemBoxPlaceHolder);
+
+        javax.swing.GroupLayout itemFrameLayout = new javax.swing.GroupLayout(itemFrame.getContentPane());
+        itemFrame.getContentPane().setLayout(itemFrameLayout);
+        itemFrameLayout.setHorizontalGroup(
+            itemFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, itemFrameLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
+            .addGroup(itemFrameLayout.createSequentialGroup()
+                .addGroup(itemFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(itemFrameLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(searchItem, javax.swing.GroupLayout.PREFERRED_SIZE, 803, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(itemFrameLayout.createSequentialGroup()
+                        .addGap(309, 309, 309)
+                        .addComponent(newItem, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        itemFrameLayout.setVerticalGroup(
+            itemFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(itemFrameLayout.createSequentialGroup()
+                .addComponent(searchItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addComponent(newItem)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout spellFrameLayout = new javax.swing.GroupLayout(spellFrame.getContentPane());
+        spellFrame.getContentPane().setLayout(spellFrameLayout);
+        spellFrameLayout.setHorizontalGroup(
+            spellFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        spellFrameLayout.setVerticalGroup(
+            spellFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout monsterFrameLayout = new javax.swing.GroupLayout(monsterFrame.getContentPane());
+        monsterFrame.getContentPane().setLayout(monsterFrameLayout);
+        monsterFrameLayout.setHorizontalGroup(
+            monsterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        monsterFrameLayout.setVerticalGroup(
+            monsterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout mapFrameLayout = new javax.swing.GroupLayout(mapFrame.getContentPane());
+        mapFrame.getContentPane().setLayout(mapFrameLayout);
+        mapFrameLayout.setHorizontalGroup(
+            mapFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        mapFrameLayout.setVerticalGroup(
+            mapFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout lootFrameLayout = new javax.swing.GroupLayout(lootFrame.getContentPane());
+        lootFrame.getContentPane().setLayout(lootFrameLayout);
+        lootFrameLayout.setHorizontalGroup(
+            lootFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        lootFrameLayout.setVerticalGroup(
+            lootFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout encounterFrameLayout = new javax.swing.GroupLayout(encounterFrame.getContentPane());
+        encounterFrame.getContentPane().setLayout(encounterFrameLayout);
+        encounterFrameLayout.setHorizontalGroup(
+            encounterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        encounterFrameLayout.setVerticalGroup(
+            encounterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 986, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 796, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,80 +233,80 @@ public class DnDToolbox extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Welcome to the D&D Toolbox!");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setText("Characters");
-        jButton1.setPreferredSize(new java.awt.Dimension(70, 15));
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        characterButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        characterButton.setText("Characters");
+        characterButton.setPreferredSize(new java.awt.Dimension(70, 15));
+        characterButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                characterButtonMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        characterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                characterButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setText("Items");
-        jButton2.setPreferredSize(new java.awt.Dimension(70, 15));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        itemsButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        itemsButton.setText("Items");
+        itemsButton.setPreferredSize(new java.awt.Dimension(70, 15));
+        itemsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                itemsButtonMouseClicked(evt);
             }
         });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        itemsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                itemsButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton3.setText("Spells");
-        jButton3.setPreferredSize(new java.awt.Dimension(70, 15));
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        spellsButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        spellsButton.setText("Spells");
+        spellsButton.setPreferredSize(new java.awt.Dimension(70, 15));
+        spellsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                spellsButtonMouseClicked(evt);
             }
         });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        spellsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                spellsButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton4.setText("Monsters");
-        jButton4.setPreferredSize(new java.awt.Dimension(0, 0));
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        monstersButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        monstersButton.setText("Monsters");
+        monstersButton.setPreferredSize(new java.awt.Dimension(0, 0));
+        monstersButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                monstersButtonMouseClicked(evt);
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton5.setText("Maps");
-        jButton5.setPreferredSize(new java.awt.Dimension(70, 15));
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        mapsButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mapsButton.setText("Maps");
+        mapsButton.setPreferredSize(new java.awt.Dimension(70, 15));
+        mapsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
+                mapsButtonMouseClicked(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton6.setText("Loot");
-        jButton6.setPreferredSize(new java.awt.Dimension(70, 15));
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        lootButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lootButton.setText("Loot");
+        lootButton.setPreferredSize(new java.awt.Dimension(70, 15));
+        lootButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
+                lootButtonMouseClicked(evt);
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton7.setText("Encounters");
-        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+        encounterButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        encounterButton.setText("Encounters");
+        encounterButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton7MouseClicked(evt);
+                encounterButtonMouseClicked(evt);
             }
         });
 
@@ -152,13 +322,13 @@ public class DnDToolbox extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(129, 129, 129)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(characterButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(spellsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(monstersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(mapsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lootButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(encounterButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(106, 106, 106)))
                 .addGap(27, 27, 27))
         );
@@ -167,66 +337,159 @@ public class DnDToolbox extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, Short.MAX_VALUE)
+                .addComponent(characterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, Short.MAX_VALUE)
+                .addComponent(itemsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(spellsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(monstersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mapsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lootButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7)
+                .addComponent(encounterButton)
                 .addGap(21, 21, 21))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void characterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_characterButtonMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_characterButtonMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void itemsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemsButtonMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_itemsButtonMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void spellsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spellsButtonMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_spellsButtonMouseClicked
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    private void monstersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_monstersButtonMouseClicked
+        monsterFrame.setSize(875,538);
+        monsterFrame.setLocationRelativeTo(null);
+        monsterFrame.setVisible(true);
+        characterFrame.setVisible(false);
+        itemFrame.setVisible(false);
+        spellFrame.setVisible(false);
+        mapFrame.setVisible(false);
+        lootFrame.setVisible(false);
+        encounterFrame.setVisible(false);
+    }//GEN-LAST:event_monstersButtonMouseClicked
+
+    private void mapsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mapsButtonMouseClicked
+        mapFrame.setSize(875,538);
+        mapFrame.setLocationRelativeTo(null);
+        mapFrame.setVisible(true);
+        characterFrame.setVisible(false);
+        itemFrame.setVisible(false);
+        monsterFrame.setVisible(false);
+        spellFrame.setVisible(false);
+        lootFrame.setVisible(false);
+        encounterFrame.setVisible(false);
+    }//GEN-LAST:event_mapsButtonMouseClicked
+
+    private void lootButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lootButtonMouseClicked
+        lootFrame.setSize(875,538);
+        lootFrame.setLocationRelativeTo(null);
+        lootFrame.setVisible(true);
+        characterFrame.setVisible(false);
+        itemFrame.setVisible(false);
+        monsterFrame.setVisible(false);
+        mapFrame.setVisible(false);
+        spellFrame.setVisible(false);
+        encounterFrame.setVisible(false);
+    }//GEN-LAST:event_lootButtonMouseClicked
+
+    private void encounterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_encounterButtonMouseClicked
+        encounterFrame.setSize(875,538);
+        encounterFrame.setLocationRelativeTo(null);
+        encounterFrame.setVisible(true);
+        characterFrame.setVisible(false);
+        itemFrame.setVisible(false);
+        monsterFrame.setVisible(false);
+        mapFrame.setVisible(false);
+        lootFrame.setVisible(false);
+        spellFrame.setVisible(false);
+    }//GEN-LAST:event_encounterButtonMouseClicked
+
+    private void itemsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemsButtonActionPerformed
+        itemFrame.setSize(875,538);
+        itemFrame.setLocationRelativeTo(null);
+        itemFrame.setVisible(true);
+        characterFrame.setVisible(false);
+        spellFrame.setVisible(false);
+        monsterFrame.setVisible(false);
+        mapFrame.setVisible(false);
+        lootFrame.setVisible(false);
+        encounterFrame.setVisible(false);
+        itemFrame.setVisible(true);
+
+        //REMEMBER TO REMOVE REQUEST AUTO FOCUS FALSE TO FIX NO CLICK ON SEARCH BAR
+        
+    }//GEN-LAST:event_itemsButtonActionPerformed
+
+    private void spellsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spellsButtonActionPerformed
+        spellFrame.setSize(875,538);
+        spellFrame.setLocationRelativeTo(null);
+        spellFrame.setVisible(true);
+        characterFrame.setVisible(false);
+        itemFrame.setVisible(false);
+        monsterFrame.setVisible(false);
+        mapFrame.setVisible(false);
+        lootFrame.setVisible(false);
+        encounterFrame.setVisible(false);
+    }//GEN-LAST:event_spellsButtonActionPerformed
+
+    private void characterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_characterButtonActionPerformed
+        characterFrame.setSize(875,538);
+        characterFrame.setLocationRelativeTo(null);
+        itemFrame.setVisible(false);
+        spellFrame.setVisible(false);
+        monsterFrame.setVisible(false);
+        mapFrame.setVisible(false);
+        lootFrame.setVisible(false);
+        encounterFrame.setVisible(false);
+        characterFrame.setVisible(true);
+
+    }//GEN-LAST:event_characterButtonActionPerformed
+
+    private void searchCharacterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCharacterActionPerformed
+        String input = searchCharacter.getText();
+        System.out.println(input);
+    }//GEN-LAST:event_searchCharacterActionPerformed
+
+    private void searchCharacterFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchCharacterFocusGained
+        searchCharacter.setText("");
+    }//GEN-LAST:event_searchCharacterFocusGained
+
+    private void searchCharacterFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchCharacterFocusLost
+        searchCharacter.setEditable(true);
+        searchCharacter.setText("Search...");
+    }//GEN-LAST:event_searchCharacterFocusLost
+
+    private void searchItemFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchItemFocusGained
+        searchItem.setText("");
+    }//GEN-LAST:event_searchItemFocusGained
+
+    private void searchItemFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchItemFocusLost
+        searchItem.setEditable(true);
+        searchItem.setText("Search...");
+    }//GEN-LAST:event_searchItemFocusLost
+
+    private void searchItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchItemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4MouseClicked
+    }//GEN-LAST:event_searchItemActionPerformed
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5MouseClicked
+    private void newCharacterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newCharacterActionPerformed
+        jDialog1.setSize(991,802);
+        jDialog1.setVisible(true);
+        jDialog1.setLocationRelativeTo(null);
 
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6MouseClicked
-
-    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7MouseClicked
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jFrame1.getPreferredSize();
-        jFrame1.setVisible(true);
-
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_newCharacterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,17 +527,29 @@ public class DnDToolbox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JFrame jFrame1;
+    private javax.swing.JButton characterButton;
+    private javax.swing.JFrame characterFrame;
+    private javax.swing.JButton encounterButton;
+    private javax.swing.JFrame encounterFrame;
+    private javax.swing.JTextArea itemBoxPlaceHolder;
+    private javax.swing.JFrame itemFrame;
+    private javax.swing.JButton itemsButton;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton lootButton;
+    private javax.swing.JFrame lootFrame;
+    private javax.swing.JFrame mapFrame;
+    private javax.swing.JButton mapsButton;
+    private javax.swing.JFrame monsterFrame;
+    private javax.swing.JButton monstersButton;
+    private javax.swing.JButton newCharacter;
+    private javax.swing.JButton newItem;
+    private javax.swing.JTextArea previousCharacters;
+    private javax.swing.JTextField searchCharacter;
+    private javax.swing.JTextField searchItem;
+    private javax.swing.JFrame spellFrame;
+    private javax.swing.JButton spellsButton;
     // End of variables declaration//GEN-END:variables
 }
