@@ -1,6 +1,6 @@
 /*
- *	Alive.java
- *	Author: Strider Jonak
+ *  Alive.java
+ *  Author: Strider Jonak
  *  Version: 11.30.2017
  *
  *  Superclass for living creatures that will extend
@@ -11,7 +11,7 @@ import java.util.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class Alive {
+public class Alive extends RPGToolbox {
 
 	private String NAME;
 	private String ALIGNMENT;
@@ -26,12 +26,12 @@ public class Alive {
 	private List<Integer>		ModiLIST	= new ArrayList<Integer>();
 	private List<Item>		ItemLIST 	= new ArrayList<Item>();
 	private List<SpellAbility> 	SpellLIST	= new ArrayList<SpellAbility>();
-	private List<Boolean>		ProfLIST	= new ArrayList<Boolean>();
+	private List<Integer>		ProfLIST	= new ArrayList<Integer>();
 
 	// ALIVE CONSTRUCTOR
   	public Alive(String name, String align,
 					int health, int armor, int speed, int exp,
-					List<Integer> stats, List<Integer> mods, List<Boolean> pros) {
+					List<Integer> stats, List<Integer> mods, List<Integer> pros) {
   		NAME			= name;
 		ALIGNMENT		= align;
   		HEALTHNOW		= health;
@@ -184,17 +184,17 @@ public class Alive {
 	 *  toString()  - return a String representation of the Alive object
 	 */
 	public String toString() {
-		return  "Name:\t"		+	NAME		+
-				"\nAlign:\t"	+	ALIGNMENT	+
-				"\nStats:\t"	+	StatLIST.toString()	+
-				"\nMods:\t"	+	ModiLIST.toString()	+
-				"\nPros:\t"	+	ProfLIST.toString()	+
-				"\nHealth:\t"	+	HEALTHNOW	+"/"+	HEALTHMAX	+"+"+	HEALTHTEMP	+
-				"\nArmor:\t"	+	ARMORCLASS	+
-				"\nSpeed:\t"	+	MOVESPEED	+
-				"\nExp:\t"	+	EXPERIENCE	+
+		return  "Name:\t"	+	NAME		+
+			"\nAlign:\t"	+	ALIGNMENT	+
+			"\nStats:\t"	+	StatLIST.toString()	+
+			"\nMods:\t"	+	ModiLIST.toString()	+
+			"\nPros:\t"	+	ProfLIST.toString()	+
+			"\nHealth:\t"	+	HEALTHNOW	+"/"+	HEALTHMAX	+"+"+	HEALTHTEMP	+
+			"\nArmor:\t"	+	ARMORCLASS	+
+			"\nSpeed:\t"	+	MOVESPEED	+
+			"\nExp:\t"	+	EXPERIENCE	+
 				
-				"\nItems:\t"	+	ItemLIST.toString()	+
-				"\nSpells:\t"	+	SpellLIST.toString();
+			"\nItems:\t"	+	ItemLIST.toString()	+
+			"\nSpells:\t"	+	SpellLIST.toString();
 	}
 }
