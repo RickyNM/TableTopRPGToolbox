@@ -7,7 +7,7 @@ public class AliveTest {
 
 		List<Integer> stats1	= new ArrayList<>();
 		List<Integer> mods1	= new ArrayList<>();
-		List<Boolean> pros1	= new ArrayList<>();
+		List<Integer> pros1	= new ArrayList<>();
 
 		stats1.add(9);
 		stats1.add(18);
@@ -24,20 +24,33 @@ public class AliveTest {
 		mods1.add(3);
 
 		for (int i = 0; i < 18; i++){
-			pros1.add(false);
+			pros1.add(0);
 		}
 
-		Alive player1 = new Alive(
+		CharacterClass	Wizard = new CharacterClass();
+		Wizard.setName("Wizard");
+		Background	Hermit = new Background();
+		Hermit.setName("Hermit");
+		Race		Human = new Race();
+		Human.setName("Human");
+
+		Character player1 = new Character(
 			"Gandalf the Gray",	// NAME
 			"Neutral Good",		// ALIGNMENT
+			"Tolkin",		// PLAYER
+			Wizard,			// CCLASS
+			Hermit,			// BACKGROUND
+			Human,			// RACE	
 			10,			// HEALTH
 			8,			// ARMORCLASS
 			30,			// MOVESPEED
 			500,			// EXPERIENCE
+			1,			// LEVEL
 			stats1,			// StatLIST
 			mods1,			// ModiLIST
 			pros1			// ProfLIST
 		);
+		
 		System.out.println(player1.toString());
 		System.out.println("<------LEVELUP----->");
 
