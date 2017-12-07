@@ -1094,61 +1094,61 @@ public class DnDToolbox extends javax.swing.JFrame {
         monsterFrame.setSize(875,538);
         monsterFrame.setLocationRelativeTo(null);
         monsterFrame.setVisible(true);
-        characterFrame.setVisible(false);
+        /*characterFrame.setVisible(false);
         itemFrame.setVisible(false);
         spellFrame.setVisible(false);
         mapFrame.setVisible(false);
         lootFrame.setVisible(false);
-        encounterFrame.setVisible(false);
+        encounterFrame.setVisible(false);*/
     }//GEN-LAST:event_monstersButtonMouseClicked
 
     private void mapsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mapsButtonMouseClicked
         mapFrame.setSize(875,538);
         mapFrame.setLocationRelativeTo(null);
         mapFrame.setVisible(true);
-        characterFrame.setVisible(false);
+        /*characterFrame.setVisible(false);
         itemFrame.setVisible(false);
         monsterFrame.setVisible(false);
         spellFrame.setVisible(false);
         lootFrame.setVisible(false);
-        encounterFrame.setVisible(false);
+        encounterFrame.setVisible(false);*/
     }//GEN-LAST:event_mapsButtonMouseClicked
 
     private void lootButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lootButtonMouseClicked
         lootFrame.setSize(875,538);
         lootFrame.setLocationRelativeTo(null);
         lootFrame.setVisible(true);
-        characterFrame.setVisible(false);
+        /*characterFrame.setVisible(false);
         itemFrame.setVisible(false);
         monsterFrame.setVisible(false);
         mapFrame.setVisible(false);
         spellFrame.setVisible(false);
-        encounterFrame.setVisible(false);
+        encounterFrame.setVisible(false);*/
     }//GEN-LAST:event_lootButtonMouseClicked
 
     private void encounterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_encounterButtonMouseClicked
         encounterFrame.setSize(875,538);
         encounterFrame.setLocationRelativeTo(null);
         encounterFrame.setVisible(true);
-        characterFrame.setVisible(false);
+        /*characterFrame.setVisible(false);
         itemFrame.setVisible(false);
         monsterFrame.setVisible(false);
         mapFrame.setVisible(false);
         lootFrame.setVisible(false);
-        spellFrame.setVisible(false);
+        spellFrame.setVisible(false);*/
     }//GEN-LAST:event_encounterButtonMouseClicked
 
     private void itemsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemsButtonActionPerformed
         itemFrame.setSize(875,538);
         itemFrame.setLocationRelativeTo(null);
         itemFrame.setVisible(true);
-        characterFrame.setVisible(false);
+        /*characterFrame.setVisible(false);
         spellFrame.setVisible(false);
         monsterFrame.setVisible(false);
         mapFrame.setVisible(false);
         lootFrame.setVisible(false);
         encounterFrame.setVisible(false);
-        itemFrame.setVisible(true);
+        itemFrame.setVisible(true);*/
 
         //REMEMBER TO REMOVE REQUEST AUTO FOCUS FALSE TO FIX NO CLICK ON SEARCH BAR
         
@@ -1158,23 +1158,23 @@ public class DnDToolbox extends javax.swing.JFrame {
         spellFrame.setSize(875,538);
         spellFrame.setLocationRelativeTo(null);
         spellFrame.setVisible(true);
-        characterFrame.setVisible(false);
+        /*characterFrame.setVisible(false);
         itemFrame.setVisible(false);
         monsterFrame.setVisible(false);
         mapFrame.setVisible(false);
         lootFrame.setVisible(false);
-        encounterFrame.setVisible(false);
-    }//GEN-LAST:event_spellsButtonActionPerformed
+        encounterFrame.setVisible(false);*/
+   }//GEN-LAST:event_spellsButtonActionPerformed
 
     private void characterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_characterButtonActionPerformed
         characterFrame.setSize(875,538);
         characterFrame.setLocationRelativeTo(null);
-        itemFrame.setVisible(false);
+        /*itemFrame.setVisible(false);
         spellFrame.setVisible(false);
         monsterFrame.setVisible(false);
         mapFrame.setVisible(false);
         lootFrame.setVisible(false);
-        encounterFrame.setVisible(false);
+        encounterFrame.setVisible(false);*/
         characterFrame.setVisible(true);
 
     }//GEN-LAST:event_characterButtonActionPerformed
@@ -1207,7 +1207,7 @@ public class DnDToolbox extends javax.swing.JFrame {
     }//GEN-LAST:event_searchItemActionPerformed
 
     private void newCharacterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newCharacterActionPerformed
-        jDialog1.setSize(270,795);
+        jDialog1.setSize(270,650);
         jDialog1.setVisible(true);
         jDialog1.setLocationRelativeTo(null);
 
@@ -1295,19 +1295,22 @@ public class DnDToolbox extends javax.swing.JFrame {
     public String chAC;
     public String chSpeed;
     public String chEXP;
-    public String chLevel;
+    public int chLevel;
     public String chRace;
     public String chBack;
-    public String chStr;
-    public String chDex;
-    public String chCon;
-    public String 
-    public String 
-    public String 
-    public String 
-    public String 
-    public String 
-    public String 
+    public int chStr;
+    public int chDex;
+    public int chCon;
+    public int chInt;
+    public int chWisdom;
+    public int chCha;
+    public int chStrMod;
+    public int chDexMod;
+    public int chConMod;
+    public int chIntMod;
+    public int chWisMod;
+    public int chChaMod;
+
 
 
 
@@ -1384,24 +1387,13 @@ public class DnDToolbox extends javax.swing.JFrame {
             expField.setText("Enter EXP...");
     }//GEN-LAST:event_expFieldFocusLost
 
-    private void levelFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_levelFieldFocusGained
-        
-
-        //int chLevel = Integer.parseInt(levelField.getText());
-        
-
+    private void levelFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_levelFieldFocusGained        
         String levelText = levelField.getText();
         if (levelText.equals("Enter Level...") || levelText.equals(""))
             levelField.setText("");
     }//GEN-LAST:event_levelFieldFocusGained
 
     private void levelFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_levelFieldFocusLost
-        
-
-
-        //int chLevel = Integer.parseInt(levelField.getText());
-
-
         String levelText = levelField.getText();
         if (levelText.equals(""))
             levelField.setText("Enter Level...");
@@ -1432,134 +1424,226 @@ public class DnDToolbox extends javax.swing.JFrame {
     }//GEN-LAST:event_backFieldFocusLost
 
     private void strFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_strFieldFocusGained
-        
-
-        //int chStr = Integer.parseInt(strField.getText());
-
         String strText = strField.getText();
-        if (strText.equals("Enter Strength...") || strText.equals(""))
+        if (strText.equals("Strength...") || strText.equals(""))
             strField.setText("");
     }//GEN-LAST:event_strFieldFocusGained
 
     private void strFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_strFieldFocusLost
-        //int chStr = Integer.parseInt(strField.getText());
-
         String strText = strField.getText();
         if (strText.equals(""))
-            strField.setText("");
+            strField.setText("Strength...");
     }//GEN-LAST:event_strFieldFocusLost
 
     private void strModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_strModFieldFocusGained
-        // TODO add your handling code here:
+        String strModText = strModField.getText();
+        if (strModText.equals("Modifier...") || strModText.equals(""))
+            strModField.setText("");
     }//GEN-LAST:event_strModFieldFocusGained
 
     private void strModFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_strModFieldFocusLost
-        // TODO add your handling code here:
+
+        String strModText = strModField.getText();
+        if (strModText.equals(""))
+            strModField.setText("Modifier...");
+
     }//GEN-LAST:event_strModFieldFocusLost
 
     private void dexFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dexFieldFocusGained
-        
 
-        //int chDex = Integer.parseInt(dexField.getText());
+        String dexText = dexField.getText();
+        if (dexText.equals("Dexterity...") || dexText.equals(""))
+            dexField.setText("");
 
-        String levelText = levelField.getText();
-        if (levelText.equals("Enter Level...") || levelText.equals(""))
-            levelField.setText("");
     }//GEN-LAST:event_dexFieldFocusGained
 
-    private void dexFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dexFieldFocusLost
-        int chDex = Integer.parseInt(dexField.getText());
+    private void dexFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dexFieldFocusLost  
+
+        String dexText = dexField.getText();
+        if (dexText.equals(""))
+            dexField.setText("Dexterity...");
+
     }//GEN-LAST:event_dexFieldFocusLost
 
     private void dexModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dexModFieldFocusGained
-        // TODO add your handling code here:
+
+        String dexModText = dexModField.getText();
+        if (dexModText.equals("Modifier...") || dexModText.equals(""))
+            dexModField.setText("");
+
     }//GEN-LAST:event_dexModFieldFocusGained
 
     private void dexModFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dexModFieldFocusLost
-        // TODO add your handling code here:
+
+        String dexModText = dexModField.getText();
+        if (dexModText.equals(""))
+            dexModField.setText("Dexterity...");
+
     }//GEN-LAST:event_dexModFieldFocusLost
 
     private void conFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_conFieldFocusGained
-        
 
-        //int chCon = Integer.parseInt(conField.getText());
+        String conText = conField.getText();
+        if (conText.equals("Constitution...") || conText.equals(""))
+            conField.setText("");
 
-        String levelText = levelField.getText();
-        if (levelText.equals("Enter Level...") || levelText.equals(""))
-            levelField.setText("");
     }//GEN-LAST:event_conFieldFocusGained
 
     private void conFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_conFieldFocusLost
-        int chCon = Integer.parseInt(conField.getText());
+
+        String conText = conField.getText();
+        if (conText.equals(""))
+            conField.setText("Constitution...");
+
     }//GEN-LAST:event_conFieldFocusLost
 
     private void conModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_conModFieldFocusGained
-        // TODO add your handling code here:
+        
+        String conModText = conModField.getText();
+        if (conModText.equals("Modifier...") || conModText.equals(""))
+            conModField.setText("");
+
     }//GEN-LAST:event_conModFieldFocusGained
 
     private void conModFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_conModFieldFocusLost
-        // TODO add your handling code here:
+
+        String conModText = conModField.getText();
+        if (conModText.equals(""))
+            conModField.setText("Modifier...");
+        
     }//GEN-LAST:event_conModFieldFocusLost
 
     private void intFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_intFieldFocusGained
-        int chInt = Integer.parseInt(intField.getText());
+
+        String intText = intField.getText();
+        if (intText.equals("Intelligence...") || intText.equals(""))
+            intField.setText("");
+
     }//GEN-LAST:event_intFieldFocusGained
 
     private void intFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_intFieldFocusLost
-        int chInt = Integer.parseInt(intField.getText());
+
+        String intText = intField.getText();
+        if (intText.equals(""))
+            intField.setText("Intelligence...");
+
     }//GEN-LAST:event_intFieldFocusLost
 
     private void intModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_intModFieldFocusGained
-        // TODO add your handling code here:
+
+        String intModText = intModField.getText();
+        if (intModText.equals("Modifier...") || intModText.equals(""))
+            intModField.setText("");
+        
     }//GEN-LAST:event_intModFieldFocusGained
 
     private void intModFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_intModFieldFocusLost
-        // TODO add your handling code here:
+
+        String intModText = intModField.getText();
+        if (intModText.equals(""))
+            intModField.setText("Modifier...");
+        
     }//GEN-LAST:event_intModFieldFocusLost
 
     private void wisFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wisFieldFocusGained
-        int chWisdom = Integer.parseInt(wisField.getText());
+
+        String wisText = wisField.getText();
+        if (wisText.equals("Wisdom...") || wisText.equals(""))
+            wisField.setText("");
+
     }//GEN-LAST:event_wisFieldFocusGained
 
     private void wisFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wisFieldFocusLost
-        int chWisdom = Integer.parseInt(wisField.getText());
+
+        String wisText = wisField.getText();
+        if (wisText.equals(""))
+            wisField.setText("Wisdom...");
+
     }//GEN-LAST:event_wisFieldFocusLost
 
     private void wisModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wisModFieldFocusGained
-        // TODO add your handling code here:
+
+        String wisModText = wisModField.getText();
+        if (wisModText.equals("Dexterity...") || wisModText.equals(""))
+            wisModField.setText("");
+        
     }//GEN-LAST:event_wisModFieldFocusGained
 
     private void wisModFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wisModFieldFocusLost
-        // TODO add your handling code here:
+
+        String wisModText = wisModField.getText();
+        if (wisModText.equals(""))
+            wisModField.setText("Modifier...");
+        
     }//GEN-LAST:event_wisModFieldFocusLost
 
     private void chaFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chaFieldFocusGained
-        int chCha = Integer.parseInt(chaField.getText());
+
+        String chaText = chaField.getText();
+        if (chaText.equals("Charisma...") || chaText.equals(""))
+            chaField.setText("");
+
     }//GEN-LAST:event_chaFieldFocusGained
 
     private void chaFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chaFieldFocusLost
-        int chCha = Integer.parseInt(chaField.getText());
+
+        String chaText = chaField.getText();
+        if (chaText.equals(""))
+            chaField.setText("Charisma...");
+
     }//GEN-LAST:event_chaFieldFocusLost
 
     private void chaModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chaModFieldFocusGained
-        // TODO add your handling code here:
+
+        String chaModText = dexField.getText();
+        if (chaModText.equals("Dexterity...") || chaModText.equals(""))
+            chaModField.setText("");
+        
     }//GEN-LAST:event_chaModFieldFocusGained
 
     private void chaModFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chaModFieldFocusLost
-        // TODO add your handling code here:
+
+        String chaModText = dexField.getText();
+        if (chaModText.equals(""))
+            chaModField.setText("Modifier...");
+        
     }//GEN-LAST:event_chaModFieldFocusLost
 
     private void classFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_classFieldFocusGained
+
         String chClass = classField.getText();
+        if (chClass.equals("Enter Class...") || chClass.equals(""))
+            classField.setText("");
+        
     }//GEN-LAST:event_classFieldFocusGained
 
     private void classFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_classFieldFocusLost
+
         String chClass = classField.getText();
+        if (chClass.equals(""))
+            classField.setText("Enter Class...");
+        
     }//GEN-LAST:event_classFieldFocusLost
 
     private void createCharButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCharButtonActionPerformed
+
+
+        chStr = Integer.parseInt(strField.getText());
+        chDex = Integer.parseInt(dexField.getText());
+        chCon = Integer.parseInt(conField.getText());
+        chInt = Integer.parseInt(intField.getText());
+        chWisdom = Integer.parseInt(wisField.getText());
+        chCha = Integer.parseInt(chaField.getText());
+        chStrMod = Integer.parseInt(strModField.getText());
+        chDexMod = Integer.parseInt(dexModField.getText());
+        chIntMod = Integer.parseInt(intModField.getText());
+        chConMod = Integer.parseInt(conModField.getText());
+        chWisMod = Integer.parseInt(wisModField.getText());
+        chChaMod = Integer.parseInt(chaModField.getText());
+        chLevel = Integer.parseInt(levelField.getText());
+
+
         chName = nameField.getText();
-        System.out.println(chName);
     }//GEN-LAST:event_createCharButtonActionPerformed
 
 
