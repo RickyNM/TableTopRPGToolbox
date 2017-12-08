@@ -1740,8 +1740,11 @@ public class DnDToolbox extends javax.swing.JFrame {
 
 
         CharacterClass charClass = new CharacterClass();
+        charClass.setName(chClass);
         Background testBG = new Background();
+        testBG.setName(chBack);
         Race testRace = new Race();
+        testRace.setName(chRace);
 
         Character create = new Character(chName, chAlign, "Box",
                         charClass, testBG, testRace,
