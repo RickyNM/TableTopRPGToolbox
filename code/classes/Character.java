@@ -60,7 +60,7 @@ public class Character extends Alive {
     return PLAYER;
   }
 
-  public void setCClass(CharacterClass cclass)
+  public void setCharacterClass(CharacterClass cclass)
   {
     if (cclass != null)
     {
@@ -72,7 +72,7 @@ public class Character extends Alive {
     }
   }
 
-  public CharacterClass getCClass()
+  public CharacterClass getCharacterClass()
   {
     return CCLASS;
   }
