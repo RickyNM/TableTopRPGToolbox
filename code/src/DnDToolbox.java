@@ -1750,6 +1750,10 @@ public class DnDToolbox extends javax.swing.JFrame {
 
         previousCharacters.setText(create.toString());
 
+        Campaign newCampaign = new Campaign();
+        newCampaign.addCharacter(create);
+        newCampaign.writeTo();
+
         //Download all class files into src Folder
 
 
