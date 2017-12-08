@@ -8,6 +8,10 @@
  *
  * @author Jarrett
  */
+
+import java.util.*;
+
+
 public class DnDToolbox extends javax.swing.JFrame {
 
     /**
@@ -1291,13 +1295,14 @@ public class DnDToolbox extends javax.swing.JFrame {
 
     public String chName;
     public String chAlign;
-    public String chHealth;
-    public String chAC;
-    public String chSpeed;
-    public String chEXP;
+    public int chHealth;
+    public int chAC;
+    public int chSpeed;
+    public int chEXP;
     public int chLevel;
     public String chRace;
     public String chBack;
+    public String chClass;
     public int chStr;
     public int chDex;
     public int chCon;
@@ -1310,6 +1315,25 @@ public class DnDToolbox extends javax.swing.JFrame {
     public int chIntMod;
     public int chWisMod;
     public int chChaMod;
+
+    public int chProf1;
+    public int chProf2;
+    public int chProf3;
+    public int chProf4;
+    public int chProf5;
+    public int chProf6;
+    public int chProf7;
+    public int chProf8;
+    public int chProf9;
+    public int chProf10;
+    public int chProf11;
+    public int chProf12;
+    public int chProf13;
+    public int chProf14;
+    public int chProf15;
+    public int chProf16;
+    public int chProf17;
+    public int chProf18;
 
 
 
@@ -1564,7 +1588,7 @@ public class DnDToolbox extends javax.swing.JFrame {
     private void wisModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wisModFieldFocusGained
 
         String wisModText = wisModField.getText();
-        if (wisModText.equals("Dexterity...") || wisModText.equals(""))
+        if (wisModText.equals("Modifier...") || wisModText.equals(""))
             wisModField.setText("");
         
     }//GEN-LAST:event_wisModFieldFocusGained
@@ -1595,15 +1619,15 @@ public class DnDToolbox extends javax.swing.JFrame {
 
     private void chaModFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chaModFieldFocusGained
 
-        String chaModText = dexField.getText();
-        if (chaModText.equals("Dexterity...") || chaModText.equals(""))
+        String chaModText = chaModField.getText();
+        if (chaModText.equals("Modifier...") || chaModText.equals(""))
             chaModField.setText("");
         
     }//GEN-LAST:event_chaModFieldFocusGained
 
     private void chaModFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chaModFieldFocusLost
 
-        String chaModText = dexField.getText();
+        String chaModText = chaModField.getText();
         if (chaModText.equals(""))
             chaModField.setText("Modifier...");
         
@@ -1641,9 +1665,94 @@ public class DnDToolbox extends javax.swing.JFrame {
         chWisMod = Integer.parseInt(wisModField.getText());
         chChaMod = Integer.parseInt(chaModField.getText());
         chLevel = Integer.parseInt(levelField.getText());
+        chHealth = Integer.parseInt(healthField.getText());
+        chAC = Integer.parseInt(acField.getText());
+        chSpeed = Integer.parseInt(speedField.getText());
+        chEXP = Integer.parseInt(expField.getText());
 
 
         chName = nameField.getText();
+        chAlign = alignmentField.getText();
+        chRace = raceField.getText();
+        chBack = backField.getText();
+        chClass = classField.getText();
+
+
+        chProf1 = Integer.parseInt(prof1.getText());
+        chProf2 = Integer.parseInt(prof2.getText());
+        chProf3 = Integer.parseInt(prof3.getText());
+        chProf4 = Integer.parseInt(prof4.getText());
+        chProf5 = Integer.parseInt(prof5.getText());
+        chProf6 = Integer.parseInt(prof6.getText());
+        chProf7 = Integer.parseInt(prof7.getText());
+        chProf8 = Integer.parseInt(prof8.getText());
+        chProf9 = Integer.parseInt(prof9.getText());
+        chProf10 = Integer.parseInt(prof10.getText());
+        chProf11 = Integer.parseInt(prof11.getText());
+        chProf12 = Integer.parseInt(prof12.getText());
+        chProf13 = Integer.parseInt(prof13.getText());
+        chProf14 = Integer.parseInt(prof14.getText());
+        chProf15 = Integer.parseInt(prof15.getText());
+        chProf16 = Integer.parseInt(prof16.getText());
+        chProf17 = Integer.parseInt(prof17.getText());
+        chProf17 = Integer.parseInt(prof18.getText());
+
+
+        List<Integer> chStats = new ArrayList<Integer>();
+
+        chStats.add(chStr);
+        chStats.add(chDex);
+        chStats.add(chCon);
+        chStats.add(chInt);
+        chStats.add(chWisdom);
+        chStats.add(chCha);
+
+        List<Integer> chMod = new ArrayList<Integer>();
+
+        chMod.add(chStrMod);
+        chMod.add(chDexMod);
+        chMod.add(chConMod);
+        chMod.add(chIntMod);
+        chMod.add(chWisMod);
+        chMod.add(chChaMod);
+
+        List<Integer> chProfs = new ArrayList<Integer>();
+
+        chProfs.add(chProf1);
+        chProfs.add(chProf2);
+        chProfs.add(chProf3);
+        chProfs.add(chProf4);
+        chProfs.add(chProf5);
+        chProfs.add(chProf6);
+        chProfs.add(chProf7);
+        chProfs.add(chProf8);
+        chProfs.add(chProf9);
+        chProfs.add(chProf10);
+        chProfs.add(chProf11);
+        chProfs.add(chProf12);
+        chProfs.add(chProf13);
+        chProfs.add(chProf14);
+        chProfs.add(chProf15); 
+        chProfs.add(chProf16);
+        chProfs.add(chProf17);
+        chProfs.add(chProf18);
+
+
+
+        CharacterClass charClass = new CharacterClass();
+        Background testBG = new Background();
+        Race testRace = new Race();
+
+        Character create = new Character(chName, chAlign, "Box",
+                        charClass, testBG, testRace,
+                        chHealth, chAC, chSpeed, chEXP, chLevel,
+                        chStats, chMod, chProfs);
+
+        previousCharacters.setText(create.toString());
+
+        //Download all class files into src Folder
+
+
     }//GEN-LAST:event_createCharButtonActionPerformed
 
 
