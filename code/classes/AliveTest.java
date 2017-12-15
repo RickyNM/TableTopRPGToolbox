@@ -1,3 +1,11 @@
+/*
+ *    AliveTest.java
+ *    Author: Strider Jonak
+ *    Version: 12.14.2017
+ *
+ *    Test for Alive.java.
+ */
+
 import java.util.*;
 import java.util.List;
 
