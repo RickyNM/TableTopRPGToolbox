@@ -1,12 +1,19 @@
+/*
+SpellAbility.java
+Author: Ricky Morash
+Version: 12.14.2017
+
+SpellAbility is a subclass of RPGToolbox that is ment to handle all abilities and spells
+*/
 
 public class SpellAbility extends RPGToolbox
 {
-  private String range;
-  private String cost;
-  private String effect;
-  private int duration;
-  private int level;
-  private boolean concentration;
+  private String range; // the range of the spell or ability
+  private String cost; // the material cost of the spell or ability
+  private String effect; // the effect of the spell ability
+  private int duration; // the duration in rounds of combat
+  private int level; // the level of the spell or required level for the ability
+  private boolean concentration; // if the spell requires concentration
 
   public SpellAbility()
   {
@@ -30,6 +37,10 @@ public class SpellAbility extends RPGToolbox
     concentration=newConcentration;
   }
 
+/*
+setRange sets the range for the spell or ability
+It checks if the sting is null or blank
+*/
   public void setRange(String newRange)
   {
     if (newRange != null && !newRange.trim().equals(""))
@@ -43,11 +54,18 @@ public class SpellAbility extends RPGToolbox
     }
   }
 
+/*
+getRange returns the range of the spell or ability
+*/
   public String getRange()
   {
     return range;
   }
 
+/*
+setCost sets the cost
+Checks if the string is null
+*/
   public void setCost(String newCost)
   {
     if (newCost != null)
@@ -60,15 +78,23 @@ public class SpellAbility extends RPGToolbox
     }
   }
 
+/*
+getCost returns the cost
+*/
   public String getCost()
   {
     return cost;
   }
 
+/*
+setEffect sets the effect
+It checks if the string is null or blank
+*/
   public void setEffect(String newEffect)
   {
     if (newEffect != null && !newEffect.trim().equals("") )
     {
+      newEffect = newEffect.trim();
       effect = newEffect;
     }
     else
@@ -77,11 +103,18 @@ public class SpellAbility extends RPGToolbox
     }
   }
 
+/*
+getEffect returns the effect
+*/
   public String getEffect()
   {
     return effect;
   }
 
+/*
+setDuration sets the duration
+It checks if the int is negative
+*/
   public void setDuration(int newDuration)
   {
     if (newDuration >= 0)
@@ -94,11 +127,18 @@ public class SpellAbility extends RPGToolbox
     }
   }
 
+/*
+getDuration returns the duration
+*/
   public int getDuration()
   {
     return duration;
   }
 
+/*
+setLevel sets the level
+It checks if the int is negative
+*/
   public void setLevel(int newLevel)
   {
     if (newLevel >= 0)
@@ -111,21 +151,33 @@ public class SpellAbility extends RPGToolbox
     }
   }
 
-  public int getlevel()
+/*
+getLevel returns the level
+*/
+  public int getLevel()
   {
     return level;
   }
 
+/*
+getConcentration returns the concentration
+*/
   public boolean getConcentration()
   {
     return concentration;
   }
 
+/*
+setConcentration returns the concentration
+*/
   public void setConcentration(boolean newConcentration)
   {
       concentration = newConcentration;
   }
 
+/*
+toString converts the SpellAbility to a string to be writen to a file
+*/
   public String toString()
   {
     String outPut = super.toString();
