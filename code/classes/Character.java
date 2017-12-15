@@ -26,21 +26,21 @@ public class Character extends Alive {
 			List<Integer> stats, List<Integer> mods, List<Integer> pros) {
 
 		super(name, align, health, armor, speed, exp, stats, mods, pros);
-		PLAYER	=	player;
-		CCLASS	=	cclass;
-		BACKGROUND = background;
-		RACE = race;
-		LEVEL = level;
+		PLAYER		= player;
+		CCLASS		= cclass;
+		BACKGROUND 	= background;
+		RACE 		= race;
+		LEVEL 		= level;
 	}
 
   public Character()
   {
-    super("", "", 0, 0, 0, 0, new ArrayList<Integer>(), new ArrayList<Integer>(), new ArrayList<Integer>());
-    PLAYER = "";
-    CCLASS	=	new CharacterClass();
-		BACKGROUND = new Background();
-		RACE = new Race();
-		LEVEL = 1;
+	super("", "", 0, 0, 0, 0, new ArrayList<Integer>(), new ArrayList<Integer>(), new ArrayList<Integer>());
+	PLAYER 		= "";
+	CCLASS		= new CharacterClass();
+	BACKGROUND 	= new Background();
+	RACE 		= new Race();
+	LEVEL 		= 1;
   }
 
   public void setPlayer(String player)
@@ -62,8 +62,7 @@ public class Character extends Alive {
 
   public void setCharacterClass(CharacterClass cclass)
   {
-    if (cclass != null)
-    {
+    if (cclass != null){
       CCLASS = cclass;
     }
     else
@@ -77,8 +76,7 @@ public class Character extends Alive {
     return CCLASS;
   }
 
-  public void setRace(Race race)
-  {
+  public void setRace(Race race){
     if (race != null)
     {
       RACE = race;
