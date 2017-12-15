@@ -1,10 +1,10 @@
 /*
- *  Alive.java
- *  Author: Strider Jonak
- *  Version: 11.30.2017
+ *    Alive.java
+ *    Author: Strider Jonak
+ *    Version: 11.30.2017
  *
- *  Superclass for living creatures that will extend
- *  both Character and Monster classes.
+ *    Superclass for living creatures that will extend
+ *    both Character and Monster classes.
  */
 
 import java.util.*;
@@ -30,9 +30,10 @@ public class Alive extends RPGToolbox {
 
 	// ALIVE CONSTRUCTOR
   	public Alive(String name, String align,
-					int health, int armor, int speed, int exp,
-					List<Integer> stats, List<Integer> mods, List<Integer> pros) {
-  		NAME			= name;
+			int health, int armor, int speed, int exp,
+			List<Integer> stats, List<Integer> mods, List<Integer> pros) {
+
+		NAME			= name;
 		ALIGNMENT		= align;
   		HEALTHNOW		= health;
   		HEALTHMAX		= health;
@@ -45,10 +46,10 @@ public class Alive extends RPGToolbox {
 		ProfLIST		= pros;
 	}
 
-  /*  NAME METHODS
-   *  getName - return String NAME
-   *  setName - change String NAME
-   */
+  	/*  NAME METHODS
+  	 *  getName - return String NAME
+   	 *  setName - change String NAME
+   	 */
 	public String getName() {
 		return NAME;
 	}
@@ -56,22 +57,23 @@ public class Alive extends RPGToolbox {
 		NAME = name;
 	}
 
-  /*  ALIGNMENT METHODS
-   *  getAlignment - return String ALIGNMENT
-   *  setAlignment - change String ALIGNMENT
-   */
+	/*  ALIGNMENT METHODS
+	 *  getAlignment - return String ALIGNMENT
+	 *  setAlignment - change String ALIGNMENT
+ 	 */
 	public String getAlignment() {
 		return ALIGNMENT;
 	}
 	public void setAlignment(String align) {
 		ALIGNMENT = align;
 	}
-  /*  HEALTHNOW METHODS
-   *  getHealthNow - return int HEALTHNOW
-   *  setHealthNow - change int HEALTHNOW
-   *  addHealthNow - add int to HEALTHNOW
-   *  subHealthNow - sub int from HEALTHNOW
-   */
+	
+  	/*  HEALTHNOW METHODS
+   	 *  getHealthNow - return int HEALTHNOW
+   	 *  setHealthNow - change int HEALTHNOW
+   	 *  addHealthNow - add int to HEALTHNOW
+	 *  subHealthNow - sub int from HEALTHNOW
+	 */
 	public int getHealthNow() {
 		return HEALTHNOW;
 	}
@@ -85,12 +87,12 @@ public class Alive extends RPGToolbox {
 		HEALTHNOW -= health;
 	}
 
-  /*  HEALTHMAX METHODS
-   *  getHealthMax - return int HEALTHMAX
-   *  setHealthMax - change int HEALTHMAX
-   *  addHealthMax - add int to HEALTHMAX
-   *  subHealthMax - sub int from HEALTHMAX
-   */
+	/*  HEALTHMAX METHODS
+   	 *  getHealthMax - return int HEALTHMAX
+   	 *  setHealthMax - change int HEALTHMAX
+   	 *  addHealthMax - add int to HEALTHMAX
+   	 *  subHealthMax - sub int from HEALTHMAX
+   	 */
 	public int getHealthMax() {
 		return HEALTHMAX;
 	}
@@ -104,12 +106,12 @@ public class Alive extends RPGToolbox {
 		HEALTHMAX -= health;
 	}
 
-  /*  HEALTHTEMP METHODS
-   *  getHealthTemp - return int HEALTHTEMP
-   *  setHealthTemp - change int HEALTHTEMP
-   *  addHealthTemp - add int to HEALTHTEMP
-   *  subHealthTemp - sub int from HEALTHTEMP
-   */
+  	 /*  HEALTHTEMP METHODS
+  	  *  getHealthTemp - return int HEALTHTEMP
+ 	  *  setHealthTemp - change int HEALTHTEMP
+ 	  *  addHealthTemp - add int to HEALTHTEMP
+  	  *  subHealthTemp - sub int from HEALTHTEMP
+  	  */
 	public int getHealthTemp() {
 		return HEALTHTEMP;
 	}
@@ -123,12 +125,12 @@ public class Alive extends RPGToolbox {
 		HEALTHTEMP -= health;
 	}
 
-  /*  ARMORCLASS METHODS
-   *  getArmorClass - return int ARMORCLASS
-   *  setArmorClass - change int ARMORCLASS
-   *  addArmorClass - add int to ARMORCLASS
-   *  subArmorClass - sub int from ARMORCLASS
-   */
+  	 /*  ARMORCLASS METHODS
+  	  *  getArmorClass - return int ARMORCLASS
+  	  *  setArmorClass - change int ARMORCLASS
+ 	  *  addArmorClass - add int to ARMORCLASS
+ 	  *  subArmorClass - sub int from ARMORCLASS
+ 	  */
 	public int getArmorClass() {
 		return ARMORCLASS;
 	}
@@ -142,12 +144,12 @@ public class Alive extends RPGToolbox {
 		ARMORCLASS -= armor;
 	}
 
-  /*  MOVESPEED METHODS
-   *  getMoveSpeed - return int MOVESPEED
-   *  setMoveSpeed - change int MOVESPEED
-   *  addMoveSpeed - add int to MOVESPEED
-   *  subMoveSpeed - sub int from MOVESPEED
-   */
+  	/*  MOVESPEED METHODS
+ 	 *  getMoveSpeed - return int MOVESPEED
+ 	 *  setMoveSpeed - change int MOVESPEED
+ 	 *  addMoveSpeed - add int to MOVESPEED
+ 	 *  subMoveSpeed - sub int from MOVESPEED
+	 */
 	public int getMoveSpeed() {
 		return MOVESPEED;
 	}
@@ -161,12 +163,12 @@ public class Alive extends RPGToolbox {
 		MOVESPEED -= speed;
 	}
 
-  /*  EXPERIENCE METHODS
-   *  getExperience - return int EXPERIENCE
-   *  setExperience - change int EXPERIENCE
-   *  addExperience - add int to EXPERIENCE
-   *  subExperience - sub int from EXPERIENCE
-   */
+  	/*  EXPERIENCE METHODS
+ 	 *  getExperience - return int EXPERIENCE
+ 	 *  setExperience - change int EXPERIENCE
+ 	 *  addExperience - add int to EXPERIENCE
+ 	 *  subExperience - sub int from EXPERIENCE
+  	 */
 	public int getExperience() {
 		return EXPERIENCE;
 	}
@@ -184,16 +186,16 @@ public class Alive extends RPGToolbox {
 	 *  toString()  - return a String representation of the Alive object
 	 */
 	public String toString() {
-		return  "Name:\t"	+	NAME		+
-			"\nAlign:\t"	+	ALIGNMENT	+
+		return  "Name:\t"	+	NAME			+
+			"\nAlign:\t"	+	ALIGNMENT		+
 			"\nStats:\t"	+	StatLIST.toString()	+
 			"\nMods:\t"	+	ModiLIST.toString()	+
 			"\nPros:\t"	+	ProfLIST.toString()	+
-			"\nHealth:\t"	+	HEALTHNOW	+"/"+	HEALTHMAX	+"+"+	HEALTHTEMP	+
-			"\nArmor:\t"	+	ARMORCLASS	+
-			"\nSpeed:\t"	+	MOVESPEED	+
-			"\nExp:\t"	+	EXPERIENCE	+
-				
+			"\nHealth:\t"	+	HEALTHNOW		+
+			"/"+	HEALTHMAX	+"+"+	HEALTHTEMP	+
+			"\nArmor:\t"	+	ARMORCLASS		+
+			"\nSpeed:\t"	+	MOVESPEED		+
+			"\nExp:\t"	+	EXPERIENCE		+	
 			"\nItems:\t"	+	ItemLIST.toString()	+
 			"\nSpells:\t"	+	SpellLIST.toString();
 	}
