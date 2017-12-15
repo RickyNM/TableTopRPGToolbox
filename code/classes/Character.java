@@ -43,6 +43,13 @@ public class Character extends Alive {
 		LEVEL 		= 1;
  	}
 
+	/*  PLAYER METHODS
+  	 *  getPlayer - return String PLAYER
+   	 *  setPlayer - change String PLAYER
+   	 */
+  	public String getPlayer(){
+    		return PLAYER;
+  	}
   	public void setPlayer(String player){
 		
     		if (player != null && !player.trim().equals("") ){
@@ -52,10 +59,13 @@ public class Character extends Alive {
     		}
   	}
 
-  	public String getPlayer(){
-    		return PLAYER;
+	/*  CHARACTERCLASS METHODS
+  	 *  getCharacterClass - return CharacterClass CCLASS
+   	 *  setCharacterClass - change CharacterClass CCLASS
+   	 */
+	public CharacterClass getCharacterClass(){
+  		return CCLASS;
   	}
-
   	public void setCharacterClass(CharacterClass cclass){
     		if (cclass != null){
       			CCLASS = cclass;
@@ -64,10 +74,13 @@ public class Character extends Alive {
     		}
 	}
 
-	public CharacterClass getCharacterClass(){
-  		return CCLASS;
+	/*  RACE METHODS
+  	 *  getRace - return Race RACE
+   	 *  setRace - change Race RACE
+   	 */
+  	public Race getRace(){
+    		return RACE;
   	}
-
   	public void setRace(Race race){
     		if (race != null){
       			RACE = race;
@@ -76,10 +89,13 @@ public class Character extends Alive {
     		}
   	}
 
-  	public Race getRace(){
-    		return RACE;
+	/*  BACKGROUND METHODS
+  	 *  getBackground - return Background BACKGROUND
+   	 *  setBackground - change Background BACKGROUND
+   	 */
+  	public Background getBackground(){
+    		return BACKGROUND;
   	}
-
   	public void setBackground(Background background){
     		if (background != null){
      			BACKGROUND = background;
@@ -88,10 +104,13 @@ public class Character extends Alive {
     		}
   	}
 
-  	public Background getBackground(){
-    		return BACKGROUND;
+	/*  LEVEL METHODS
+  	 *  getLevel - return int LEVEL
+   	 *  setLevel - change int LEVEL
+   	 */
+  	public int getLevel(){
+    		return LEVEL;
   	}
-
   	public void setLevel(int level){
     		if (level >= 1){
       			LEVEL = level;
@@ -99,10 +118,6 @@ public class Character extends Alive {
       			System.out.println("The lowest level is 1");
     		}
  	}
-
-  	public int getLevel(){
-    		return LEVEL;
-  	}
 
 	/*
 	 *  toString()  - return a String representation of the Alive object
