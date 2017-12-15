@@ -1,10 +1,18 @@
+/*
+Bag.java
+Author: Ricky Morash
+Version: 12.13.2017
+
+Bag is a subclass of Item that is ment to deal with all items that can contain other items.
+*/
+
 import java.util.ArrayList;
 
 public class Bag extends Item
 {
-  private ArrayList<Item> contained;
-  private int maxWeight;
-  private int curentWeight;
+  private ArrayList<Item> contained; // the list of all items in the bag
+  private int maxWeight; // the maximum weight that the bag can hold
+  private int curentWeight; // the amount of weight curently in the bag
 
   public Bag()
   {
@@ -22,6 +30,10 @@ public class Bag extends Item
     curentWeight = newCurentWeight;
   }
 
+/*
+setContained set contained to the entered ArrayList
+It checks if the ArrayList is null
+*/
   public void setContained(ArrayList<Item> newContained)
   {
     if (newContained != null)
@@ -34,11 +46,22 @@ public class Bag extends Item
     }
   }
 
+/*
+getContained returns the ArrayList contained
+It is commented out because the user should not get the full ArrayList and should need to
+do things throught the class.
+*/
+/*
   public ArrayList<Item> getContained()
   {
     return contained;
   }
+*/
 
+/*
+addItem adds a new Item to the contained ArrayList
+It checks if the Item is null first
+*/
   public void addItem(Item newItem)
   {
     if (newItem != null)
@@ -47,6 +70,10 @@ public class Bag extends Item
     }
   }
 
+/*
+setItem sets a specific Item to a new Item
+It checks if the index is valid and if the Item is null
+*/
   public void setItem(Item newItem, int i)
   {
     if (i < 0 || i > contained.size() || newItem == null)
@@ -59,6 +86,10 @@ public class Bag extends Item
     }
   }
 
+/*
+getItem returns the Item at a secific index
+It makes sure that the index is valid
+*/
   public Item getItem(int i)
   {
     if (i < 0 || i > contained.size())
@@ -69,6 +100,10 @@ public class Bag extends Item
     return contained.get(i);
   }
 
+/*
+removeItem revoves the Item with the given name
+It returns the Item or null if it is not in the list
+*/
   public Item removeItem(Item oldItem)
   {
     if (oldItem != null)
@@ -84,6 +119,10 @@ public class Bag extends Item
     return null;
   }
 
+/*
+removeItem removes the Item at the designated index
+It confinmes that the index is valid
+*/
   public Item removeItem(int i)
   {
     if (i >= 0 && i < contained.size())
@@ -93,11 +132,18 @@ public class Bag extends Item
     return null;
   }
 
+/*
+getMaxWeight returns the maxWeight to the user
+*/
   public int getMaxWeight()
   {
     return maxWeight;
   }
 
+/*
+setMaxWeight sets the maxWeight
+It confirms that the newMaxWeight is a positive number
+*/
   public void setMaxWeight(int newMaxWeight)
   {
     if (newMaxWeight > 0)
@@ -110,11 +156,19 @@ public class Bag extends Item
     }
   }
 
+/*
+getCurentWeight returns the weight of all of the items in the bag
+*/
   public int getCurentWeight()
   {
     return curentWeight;
   }
 
+/*
+setCurentWeight resets the curentWeight
+It makes sure that the new weight in positive
+Should be phased out and have the weight of any Item add or removed when the item is
+*/
   public void setCurentWeight(int newCurentWeight)
   {
     if (newCurentWeight > 0)
@@ -127,6 +181,9 @@ public class Bag extends Item
     }
   }
 
+/*
+toString converts the Bag to a string to be writen to a file
+*/
   public String toString()
   {
     String outPut = super.toString();
