@@ -1,7 +1,7 @@
 /*
  *    Alive.java
  *    Author: Strider Jonak
- *    Version: 11.30.2017
+ *    Version: 12.14.2017
  *
  *    Superclass for living creatures that will extend
  *    both Character and Monster classes.
