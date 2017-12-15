@@ -13,19 +13,24 @@ import java.util.List;
 
 public class Alive extends RPGToolbox {
 
-	private String NAME;
-	private String ALIGNMENT;
-	private int    HEALTHNOW;
-	private int    HEALTHMAX;
-	private int    HEALTHTEMP;
-	private int    ARMORCLASS;
-	private int    MOVESPEED;
-	private int    EXPERIENCE;
+	private String NAME;		// Name of Alive object
+	private String ALIGNMENT;	// Alignment of Law-Chaos & Good-Evil
+	private int    HEALTHNOW;	// Current health of object
+	private int    HEALTHMAX;	// Maximum health of object
+	private int    HEALTHTEMP;	// Temporary healthpoints
+	private int    ARMORCLASS;	// Armor Class Rating
+	private int    MOVESPEED;	// Movement speed index
+	private int    EXPERIENCE;	// Amount of experience
 
+	// Stat Point ArrayList
 	private List<Integer>		StatLIST	= new ArrayList<Integer>();
+	// Modifier Point ArrayList
 	private List<Integer>		ModiLIST	= new ArrayList<Integer>();
+	// Item Inventory ArrayList
 	private List<Item>		ItemLIST 	= new ArrayList<Item>();
+	// Known Spell ArrayList
 	private List<SpellAbility> 	SpellLIST	= new ArrayList<SpellAbility>();
+	// Known Proficiency ArrayList
 	private List<Integer>		ProfLIST	= new ArrayList<Integer>();
 
 	// ALIVE CONSTRUCTOR
