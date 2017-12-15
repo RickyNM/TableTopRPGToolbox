@@ -17,24 +17,9 @@
       -SpellAbility.java
       -Background.java
       -Campaign.java
-    -NameGenerator.java
-    -MapGenerator.java
-    -UI.java
-    -CharacterGenerator.java
-    -TTRPGToolbox.java (handles connecting all the elements)
+    >src
+      -DNDtoolbox.java
   >Documentation
-    -Roadmap.txt
-    -PaperPrototypeRespons.txt
     -ClassHierarchy.txt
     -SampleData.txt
     -FileOrganization.txt
-  >Database
-    >Pitures
-    -Items.json
-    -Characters.json
-    -Maps.json
-    -Monsters.json
-    -CharacterClasses.json
-    -Races.json
-    -Spells.json
-    -Backgrounds.json
