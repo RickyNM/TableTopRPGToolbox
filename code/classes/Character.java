@@ -1,7 +1,7 @@
 /*
  *    Character.java
  *    Author: Strider Jonak
- *    Version: 12.3.17
+ *    Version: 12.14.2017
  *
  *    Character object used in creating
  *    player and non-player characters.
